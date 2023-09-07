@@ -269,21 +269,19 @@ Hints
   loop, via which you can iterate some number times. Perhaps on each
   iteration, *i*, you could print that many hashes?
 
--
-
-  You can actually “nest” loops, iterating with one variable (e.g., `i`)
+- You can actually “nest” loops, iterating with one variable (e.g., `i`)
   in the “outer” loop and another (e.g., `j`) in the “inner” loop. For
   instance, here’s how you might print a square of height and width `n`,
   below. Of course, it’s not a square that you want to print!
 
   ``` highlight
-    for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++)
   {
-  for (int j = 0; j < n; j++)
-  {
-  printf("#");
-  }
-  printf("\n");
+      for (int j = 0; j < n; j++)
+      {
+          printf("#");
+      }
+      printf("\n");
   }
   ```
 
