@@ -1,0 +1,11 @@
+1. Start
+2. Initialize n as an integer
+3. Repeat the following steps until n is between 1 and 8 (inclusive):
+   a. Prompt the user for input and store it in n
+4. For i from 0 to n - 1 (inclusive):
+   a. For j from 0 to n - i - 2 (inclusive):
+      i. Print a space
+   b. For j from 0 to i (inclusive):
+      i. Print a hash symbol
+   c. Move to the next line
+5. End
