@@ -132,91 +132,25 @@ writing code. Though the interface may look different from your
 codespace, the behavior of the two environments should be largely
 similar!
 
-[ CS50 Video Player](/)
-
--  Shortcuts
-
-&nbsp;
-
-- Snacks
-
-&nbsp;
-
--
-
-- [](https://video.cs50.io/RtjxxxlN1gc)
-
-##### Shortcuts
-
-Before using a shortcut, click at least once on the video itself (to
-give it "focus") after closing this window.
-
-|                               |                         |
-|-------------------------------|-------------------------|
-| Play/Pause                    | spacebar or k           |
-| Rewind 10 seconds             | left arrow or j         |
-| Fast forward 10 seconds       | right arrow or l        |
-| Previous frame (while paused) | ,                       |
-| Next frame (while paused)     | .                       |
-| Decrease playback rate        | \<                      |
-| Increase playback rate        | \>                      |
-| Toggle captions on/off        | c                       |
-| Toggle mute                   | m                       |
-| Toggle full screen            | f or double-click video |
+[CS50 Video Player](https://video.cs50.io/RtjxxxlN1gc)
 
 ### [Hints](#hints)
 
--
-
-  You may find the functions `isupper()` and `islower()` to be helpful
+- You may find the functions `isupper()` and `islower()` to be helpful
   to you. These functions take in a character as the argument and return
   a boolean.
 
--
-
-  To find the value at the `n`th index of an array called `arr`, we can
+- To find the value at the `n`th index of an array called `arr`, we can
   write `arr[n]`. We can apply this to strings as well, as strings are
   arrays of characters.
 
--
-
-  Recall that computers represent characters using
+- Recall that computers represent characters using
   [ASCII](https://asciitable.com/), a standard that represents each
   character as a number.
 
 Not sure how to solve?
 
-[ CS50 Video Player](/)
-
--  Shortcuts
-
-&nbsp;
-
-- Snacks
-
-&nbsp;
-
--
-
-- [](https://video.cs50.io/USiLkXuXJEg)
-
-##### Shortcuts
-
-Before using a shortcut, click at least once on the video itself (to
-give it "focus") after closing this window.
-
-|                               |                         |
-|-------------------------------|-------------------------|
-| Play/Pause                    | spacebar or k           |
-| Rewind 10 seconds             | left arrow or j         |
-| Fast forward 10 seconds       | right arrow or l        |
-| Previous frame (while paused) | ,                       |
-| Next frame (while paused)     | .                       |
-| Decrease playback rate        | \<                      |
-| Increase playback rate        | \>                      |
-| Toggle captions on/off        | c                       |
-| Toggle mute                   | m                       |
-| Toggle full screen            | f or double-click video |
+[CS50 Video Player](https://video.cs50.io/USiLkXuXJEg)
 
 ### [How to Test Your Code](#how-to-test-your-code)
 
