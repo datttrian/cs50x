@@ -71,6 +71,6 @@ int calculate_nickels(int cents)
 int calculate_pennies(int cents)
 {
     // TODO
-    int pennies = cents % 5;
+    int pennies = cents % 5; // equivalent to ((cents % 25) % 10) % 5;
     return pennies;
 }
