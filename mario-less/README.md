@@ -65,20 +65,18 @@ your steps and see if you can determine where you went wrong!
 Toward the end of World 1-1 in Nintendo’s Super Mario Brothers, Mario
 must ascend right-aligned pyramid of blocks, a la the below.
 
-![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
-
 Let’s recreate that pyramid in C, albeit in text, using hashes (`#`) for
 bricks, a la the below. Each hash is a bit taller than it is wide, so
 the pyramid itself will also be taller than it is wide.
 
 ``` highlight
        #
-##
-###
-####
-#####
-######
-#######
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
 ########
 ```
 
@@ -91,13 +89,13 @@ Here’s how the program might work if the user inputs `8` when prompted:
 ``` highlight
 $ ./mario
 Height: 8
-#
-##
-###
-####
-#####
-######
-#######
+       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
 ########
 ```
 
@@ -106,9 +104,9 @@ Here’s how the program might work if the user inputs `4` when prompted:
 ``` highlight
 $ ./mario
 Height: 4
-#
-##
-###
+   #
+  ##
+ ###
 ####
 ```
 
@@ -117,7 +115,7 @@ Here’s how the program might work if the user inputs `2` when prompted:
 ``` highlight
 $ ./mario
 Height: 2
-#
+ #
 ##
 ```
 
@@ -141,9 +139,9 @@ Height: 0
 Height: 42
 Height: 50
 Height: 4
-#
-##
-###
+   #
+  ##
+ ###
 ####
 ```
 
@@ -151,11 +149,8 @@ How to begin? Let’s approach this problem one step at a time.
 
 ## [Walkthrough](#walkthrough)
 
-# Đã xảy ra lỗi.
+[CS50 Video Player](https://www.youtube.com/watch?v=NAs4FIWkJ4s)
 
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=NAs4FIWkJ4s) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
 
 ## [Pseudocode](#pseudocode)
 
