@@ -28,7 +28,7 @@ int main(void)
         // Print the gap between the two sets of hashes
         printf("  ");
 
-        // Print the second set of hashes
+        // Print the second set of i hashes
         repeat('#', i);
 
         // Move to the next line after printing each row
