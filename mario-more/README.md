@@ -111,7 +111,7 @@ Here’s how the program might work if the user inputs `2` when prompted:
 ``` highlight
 $ ./mario
 Height: 2
-#  #
+ #  #
 ##  ##
 ```
 
@@ -135,9 +135,9 @@ Height: 0
 Height: 42
 Height: 50
 Height: 4
-#  #
-##  ##
-###  ###
+   #  #
+  ##  ##
+ ###  ###
 ####  ####
 ```
 
@@ -148,11 +148,7 @@ Open your `mario.c` file to implement this problem as described!
 
 ### [Walkthrough](#walkthrough)
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=FzN9RAjYG_Q) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=FzN9RAjYG_Q)
 
 ### [How to Test Your Code](#how-to-test-your-code)
 
