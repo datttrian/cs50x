@@ -6,22 +6,25 @@ int main(void)
     int n;
     do
     {
-        n = get_int("Positive Number: ");
+        n = get_int("Positive Number: "); // prompt the user for a positive integer
     }
-    while (n < 1 || n > 8);
+    while (n < 1 || n > 8); // keep asking until the input is between 1 and 8 (inclusive)
 
-    for (int i = 1; i <= n; i++)
+    // This loop is used to print the rows of the pyramid
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j <= n - i; j++)
+        // This loop is used to print spaces before the hashes
+        for (int j = 0; j < n - i - 1; j++)
         {
-            printf(" ");
+            printf(" "); // print a space
         }
 
-        for (int j = 1; j <= i; j++)
+        // This loop is used to print the hashes
+        for (int j = 0; j <= i; j++)
         {
-            printf("#");
+            printf("#"); // print a hash
         }
 
-        printf("\n");
+        printf("\n"); // move to the next line after printing each row
     }
 }
