@@ -7,7 +7,7 @@
 ## Week 1 C
 
 - Lab: [Population Growth](/population)
-- Practice Problem: [Debug](/debug), [Half](/half), Prime
+- Practice Problem: [Debug](/debug), [Half](/half), [Prime](/prime)
 - Problem Set: Hello, Mario Less, Mario More, Cash, Credit
 
 ## Week 2 Arrays
