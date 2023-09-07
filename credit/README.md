@@ -105,7 +105,8 @@ That’s kind of confusing, so let’s try an example with David’s Visa:
 1.  For the sake of discussion, let’s first underline every other digit,
     starting with the number’s second-to-last digit:
 
-    4<ins>0</ins>0<ins>3</ins>6<ins>0</ins>0<ins>0</ins>0<ins>0</ins>0<ins>0</ins>0<ins>1</ins>4
+    <ins>4</ins>0<ins>0</ins>3<ins>6</ins>0<ins>0</ins>0<ins>0</ins>0<ins>0</ins>0<ins>0</ins>0<ins>1</ins>4
+
 
 
     Okay, let’s multiply each of the underlined digits by 2:
