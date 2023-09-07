@@ -2,7 +2,7 @@
 
 ## Week 0 Scratch
 
-- Problem Set: Scratch
+- Problem Set: [Scratch](/scratch)
 
 ## Week 1 C
 
