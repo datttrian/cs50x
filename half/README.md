@@ -24,9 +24,6 @@ amount, the tax, and the tip.
     multiplcation and division are performed before addition and
     subtraction.
 
-## [Demo](#demo)
-
-![DebugGif](halfDemo.gif)
 
 ## [Getting Started](#getting-started)
 
