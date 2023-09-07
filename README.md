@@ -6,7 +6,7 @@
 
 ## Week 1 C
 
-- Lab: Population Growth
+- Lab: [Population Growth](/population)
 - Practice Problem: Debug, Half, Prime
 - Problem Set: Hello, Mario Less, Mario More, Cash, Credit
 
