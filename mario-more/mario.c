@@ -21,7 +21,7 @@ int main(void)
     // This loop is used to print the rows of the pyramid
     for (int i = 1; i <= n; i++)
     {
-        // Print spaces and the first set of hashes
+        // Print n - i spaces and i hashes
         repeat(' ', n - i);
         repeat('#', i);
 

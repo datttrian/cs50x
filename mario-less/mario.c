@@ -22,10 +22,10 @@ int main(void)
     // This loop is used to print the rows of the pyramid
     for (int i = 1; i <= n; i++)
     {
-        // Print spaces before the hashes
+        // Print n - i spaces before the hashes
         repeat(' ', n - i);
 
-        // Print the hashes
+        // Print i hashes
         repeat('#', i);
 
         // Move to the next line after printing each row
