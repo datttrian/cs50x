@@ -1,13 +1,11 @@
-1. Start
-2. Define a function named 'repeat' that takes a character 'c' and an integer 'times':
+1. Define a function named 'repeat' that takes a character 'c' and an integer 'times':
    a. While 'times' is greater than or equal to 0, do the following:
       i. Display the character 'c'
       ii. Decrement 'times' by 1
-3. Repeat the following steps until n is between 1 and 8 (inclusive):
+2. Repeat the following steps until n is between 1 and 8 (inclusive):
    a. Display "Positive Number: " to the user
    b. Input a positive integer and store it in n
-4. For i from 1 to n (inclusive), do the following:
+3. For i from 1 to n (inclusive), do the following:
    a. Call the 'repeat' function with parameters (' ', n - i) to print spaces before the hashes
    b. Call the 'repeat' function with parameters ('#', i) to print the hashes
    c. Move to the next line
-5. End
