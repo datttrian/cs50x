@@ -65,16 +65,14 @@ your steps and see if you can determine where you went wrong!
 Toward the beginning of World 1-1 in Nintendo’s Super Mario Brothers,
 Mario must hop over adjacent pyramids of blocks, per the below.
 
-![screenshot of Mario jumping over adjacent pyramids](pyramids.png)
-
 Let’s recreate those pyramids in C, albeit in text, using hashes (`#`)
 for bricks, a la the below. Each hash is a bit taller than it is wide,
 so the pyramids themselves will also be taller than they are wide.
 
 ``` highlight
    #  #
-##  ##
-###  ###
+  ##  ##
+ ###  ###
 ####  ####
 ```
 
@@ -87,13 +85,13 @@ Here’s how the program might work if the user inputs `8` when prompted:
 ``` highlight
 $ ./mario
 Height: 8
-#  #
-##  ##
-###  ###
-####  ####
-#####  #####
-######  ######
-#######  #######
+       #  #
+      ##  ##
+     ###  ###
+    ####  ####
+   #####  #####
+  ######  ######
+ #######  #######
 ########  ########
 ```
 
@@ -102,9 +100,9 @@ Here’s how the program might work if the user inputs `4` when prompted:
 ``` highlight
 $ ./mario
 Height: 4
-#  #
-##  ##
-###  ###
+   #  #
+  ##  ##
+ ###  ###
 ####  ####
 ```
 
