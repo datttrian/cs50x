@@ -16,13 +16,13 @@ int main(void)
         // This loop is used to print spaces before the hashes
         for (int j = 0; j < n - i - 1; j++)
         {
-            printf(" "); // print a space
+            printf(" ");
         }
 
         // This loop is used to print the hashes
-        for (int j = 0; j <= i; j++)
+        for (int j = 0; j < i - 1; j++)
         {
-            printf("#"); // print a hash
+            printf("#");
         }
 
         printf("\n"); // move to the next line after printing each row
