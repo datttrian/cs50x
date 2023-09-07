@@ -1,6 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void repeat(char c, int times)
+{
+    while (--times >= 0)
+    {
+        printf("%c", c);
+    }
+}
+
 int main(void)
 {
     int n;
@@ -11,29 +19,17 @@ int main(void)
     while (n < 1 || n > 8); // keep asking until the input is between 1 and 8 (inclusive)
 
     // This loop is used to print the rows of the pyramid
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        // This loop is used to to print spaces and the first set of hashes
-        for (int j = 0; j < n; j++)
-        {
-            if (j < n - i - 1)
-            {
-                printf(" "); // print a space
-            }
-            else
-            {
-                printf("#"); // print a hash
-            }
-        }
+        // Print spaces and the first set of hashes
+        repeat(' ', n - i);
+        repeat('#', i);
 
         // Print the gap between the two sets of hashes
         printf("  ");
 
-        // Loop to print the second set of hashes
-        for (int j = 0; j < i + 1; j++)
-        {
-            printf("#"); // print a hash
-        }
+        // Print the second set of hashes
+        repeat('#', i);
 
         printf("\n"); // move to the next line after printing each row
     }
