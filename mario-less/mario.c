@@ -20,7 +20,7 @@ int main(void)
         }
 
         // This loop is used to print the hashes
-        for (int j = 0; j < i - 1; j++)
+        for (int j = 0; j < i + 1; j++)
         {
             printf("#");
         }
