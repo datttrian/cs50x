@@ -13,7 +13,7 @@ int main(void)
     // This loop is used to print the rows of the pyramid
     for (int i = 0; i < n; i++)
     {
-        // This loop is used to print spaces and the first set of hashes
+        // This loop is used to to print spaces and the first set of hashes
         for (int j = 0; j < n; j++)
         {
             if (j < n - i - 1)
