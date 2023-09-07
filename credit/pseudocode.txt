@@ -1,0 +1,31 @@
+1. Prompt the user to enter a credit card number as a long long integer.
+2. Read the credit card number into the variable cc_number.
+3. Initialize variables for various calculations and tracking digits and sums:
+   - Set digit1 and digit2 to 0.
+   - Set num_digits to 0.
+   - Set sum_of_double_odds and sum_of_evens to 0.
+4. While cc_number > 0:
+   - Store the current digit in digit1.
+   - Store the previous digit in digit2.
+   - Determine whether the current digit is at an even or odd position using num_digits.
+     - If it's at an even position:
+       - Add the digit to sum_of_evens.
+     - Otherwise (it's at an odd position):
+       - Double the digit and add its digits to sum_of_double_odds.
+       - To double a digit and add its digits, calculate multiple = 2 * digit1,
+         and add (multiple / 10) and (multiple % 10) to sum_of_double_odds.
+   - Move to the next digit in the credit card number by dividing cc_number by 10.
+   - Increment num_digits by 1.
+5. Check if the sum of sum_of_evens and sum_of_double_odds is a multiple of 10 (i.e., if it's a valid credit card number):
+   - Set is_valid to (sum_of_evens + sum_of_double_odds) % 10 == 0.
+6. Extract the first two digits of the credit card number:
+   - Set first_two_digits to (digit1 * 10) + digit2.
+7. Check for various credit card company and length conditions and print the result:
+   - If digit1 is 4 and num_digits is between 13 and 16 (inclusive) and is_valid is true:
+     - Print "VISA".
+   - Else if first_two_digits are between 51 and 55 (inclusive), num_digits is 16, and is_valid is true:
+     - Print "MASTERCARD".
+   - Else if first_two_digits are 34 or 37, num_digits is 15, and is_valid is true:
+     - Print "AMEX".
+   - Else:
+     - Print "INVALID".
