@@ -31,6 +31,7 @@ int main(void)
         // Print the second set of hashes
         repeat('#', i);
 
-        printf("\n"); // move to the next line after printing each row
+        // Move to the next line after printing each row
+        printf("\n");
     }
 }
