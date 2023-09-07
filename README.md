@@ -8,7 +8,7 @@
 
 - Lab: [Population Growth](/population)
 - Practice Problem: [Debug](/debug), [Half](/half), [Prime](/prime)
-- Problem Set: Hello, Mario Less, Mario More, Cash, Credit
+- Problem Set: [Hello](/hello), Mario Less, Mario More, Cash, Credit
 
 ## Week 2 Arrays
 
