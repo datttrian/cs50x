@@ -6,44 +6,35 @@ int main(void)
     int n;
     do
     {
-        n = get_int("Positive Number: ");
+        n = get_int("Positive Number: "); // prompt the user for a positive integer
     }
-    while (n < 1 || n > 8);
+    while (n < 1 || n > 8); // keep asking until the input is between 1 and 8 (inclusive)
 
-    // For each new row
-    for (int i = 1; i <= n; i++)
+    // This loop is used to print the rows of the pyramid
+    for (int i = 0; i < n; i++)
     {
-        // For each row's bricks
-        for (int j = 1; j <= n; j++)
+        // Loop to print spaces and the first set of hashes
+        for (int j = 0; j < n; j++)
         {
-            if (j <= n - i)
+            if (j < n - i - 1)
             {
-                // Print blank spaces
-                printf(" ");
+                printf(" "); // print a space
             }
             else
             {
-                // Print the brick
-                printf("#");
+                printf("#"); // print a hash
             }
         }
 
+        // Print the gap between the two sets of hashes
         printf("  ");
 
-        for (int k = n; k >= 1; k--)
+        // Loop to print the second set of hashes
+        for (int j = 0; j <= i; j++)
         {
-            if (k <= n - i)
-            {
-                // Skip for no character at all
-            }
-            else
-            {
-                // Print the bricks
-                printf("#");
-            }
+            printf("#"); // print a hash
         }
 
-        // Go to the next line
-        printf("\n");
+        printf("\n"); // move to the next line after printing each row
     }
 }
