@@ -1,42 +1,30 @@
 #include <cs50.h>
 #include <stdio.h>
 
-// This function repeats a character 'c' 'times' number of times and prints them.
-void repeat(char c, int times)
+int main(void)
 {
-    while (--times >= 0)
-    {
-        printf("%c", c);
-    }
-}
-
-int main()
-{
-    int height, width;
-
-    // This loop ensures that the user inputs a valid 'height' value between 0 and 23.
+    int n;
     do
     {
-        height = get_int("Height: "); // Prompt user for pyramid height.
-        width = height; // Set 'width' equal to 'height' as each row's width equals the height.
+        n = get_int("Positive Number: "); // prompt the user for a positive integer
     }
-    while (height < 0 || height > 23); // Repeat the loop if height is not within the valid range.
+    while (n < 1 || n > 8); // keep asking until the input is between 1 and 8 (inclusive)
 
-    // This loop iterates through each row of the pyramid.
-    for (int i = 1; i <= height; i++)
+    // This loop is used to print the rows of the pyramid
+    for (int i = 0; i < n; i++)
     {
-        int num_hashes = i; // Number of '#' symbols in the current row.
-        int num_spaces = width - num_hashes; // Number of spaces in the current row.
+        // This loop is used to print spaces before the hashes
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            printf(" ");
+        }
 
-        repeat(' ', num_spaces); // Print the required number of spaces.
-        repeat('#', num_hashes); // Print the required number of '#' symbols.
+        // This loop is used to print the hashes
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("#");
+        }
 
-        printf("  "); // Print two spaces in between the pyramid halves.
-
-        repeat('#', num_hashes); // Print the required number of '#' symbols again.
-
-        printf("\n"); // Move to the next line for the next row.
+        printf("\n"); // move to the next line after printing each row
     }
-
-    return 0; // Indicates successful program execution.
 }
