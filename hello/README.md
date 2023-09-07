@@ -158,11 +158,7 @@ different inputs, with:
 Here’s a “walkthrough” (i.e., tour) of this problem, if you’d like a
 verbal overview of what to do too!
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=wSk1KSDUEYA) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=wSk1KSDUEYA)
 
 ### [Hints](#hints)
 
