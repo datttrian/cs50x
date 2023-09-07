@@ -13,7 +13,7 @@
 ## Week 2 Arrays
 
 - Lab: [Scrabble](/scrabble)
-- Practice Problem: Hours, N0 V0w3ls, Prime
+- Practice Problem: [Hours](/hours), [N0 V0w3ls](/no-vowels), Password
 - Problem Set: Readability, Bulbs, Caesar, Substitution, Wordle50
 
 ## Week 3 Algorithms
