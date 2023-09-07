@@ -141,41 +141,9 @@ size to the end size.
 
 [ CS50 Video Player](/)
 
--  Shortcuts
-
-&nbsp;
-
-- Snacks
-
-&nbsp;
-
--
-
-- [](https://video.cs50.io/dZmtRHHUB1M)
-
-##### Shortcuts
-
-Before using a shortcut, click at least once on the video itself (to
-give it "focus") after closing this window.
-
-|                               |                         |
-|-------------------------------|-------------------------|
-| Play/Pause                    | spacebar or k           |
-| Rewind 10 seconds             | left arrow or j         |
-| Fast forward 10 seconds       | right arrow or l        |
-| Previous frame (while paused) | ,                       |
-| Next frame (while paused)     | .                       |
-| Decrease playback rate        | \<                      |
-| Increase playback rate        | \>                      |
-| Toggle captions on/off        | c                       |
-| Toggle mute                   | m                       |
-| Toggle full screen            | f or double-click video |
-
 ### [Hints](#hints)
 
--
-
-  If you want to repeatedly re-prompt the user for the value of a
+- If you want to repeatedly re-prompt the user for the value of a
   variable until some condition is met, you might want to use a
   `do ... while` loop. For example, recall the following code from
   lecture, which prompts the user repeatedly until they enter a positive
@@ -198,16 +166,12 @@ give it "focus") after closing this window.
   - For example, you might want to create a variable to keep track of
     how many years have passed.
 
--
-
-  To calculate how many years it will take for the population to reach
+- To calculate how many years it will take for the population to reach
   the end size, another loop might be helpful! Inside the loop, you’ll
   likely want to update the population size according to the formula in
   the Background, and update the number of years that have passed.
 
--
-
-  To print an integer `n` to the terminal, recall that you can use a
+- To print an integer `n` to the terminal, recall that you can use a
   line of code like
 
   ``` highlight
@@ -253,40 +217,6 @@ Start size: 100
 End size: 1000000
 Years: 115
 ```
-
-Not sure how to solve?
-
-[ CS50 Video Player](/)
-
--  Shortcuts
-
-&nbsp;
-
-- Snacks
-
-&nbsp;
-
--
-
-- [](https://video.cs50.io/2CcqQnLbGOE)
-
-##### Shortcuts
-
-Before using a shortcut, click at least once on the video itself (to
-give it "focus") after closing this window.
-
-|                               |                         |
-|-------------------------------|-------------------------|
-| Play/Pause                    | spacebar or k           |
-| Rewind 10 seconds             | left arrow or j         |
-| Fast forward 10 seconds       | right arrow or l        |
-| Previous frame (while paused) | ,                       |
-| Next frame (while paused)     | .                       |
-| Decrease playback rate        | \<                      |
-| Increase playback rate        | \>                      |
-| Toggle captions on/off        | c                       |
-| Toggle mute                   | m                       |
-| Toggle full screen            | f or double-click video |
 
 Execute the below to evaluate the correctness of your code using
 `check50`. But be sure to compile and test it yourself as well!
