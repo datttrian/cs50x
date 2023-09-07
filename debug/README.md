@@ -6,8 +6,6 @@
 - Learn what C compiler error messages mean
 - Get practice debugging
 
-![debugging](./first_bug.jpg)
-
 ## [Background](#background)
 
 There are two kinds of errors that can occur when writing a program. The
@@ -35,10 +33,6 @@ compiler, and **debug** the program.
     libraries, missing variable declarations.
   - If you are still stuck, try typing into the terminal
     `help50 make debug`.
-
-## [Demo](#demo)
-
-![DebugGif](debugDemo.gif)
 
 ## [Getting Started](#getting-started)
 
