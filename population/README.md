@@ -139,7 +139,7 @@ size to the end size.
 
 ### [Walkthrough](#walkthrough)
 
-[ CS50 Video Player](/)
+[CS50 Video Player](https://video.cs50.io/dZmtRHHUB1M)
 
 ### [Hints](#hints)
 
@@ -217,6 +217,10 @@ Start size: 100
 End size: 1000000
 Years: 115
 ```
+
+Not sure how to solve?
+
+[CS50 Video Player](https://video.cs50.io/2CcqQnLbGOE)
 
 Execute the below to evaluate the correctness of your code using
 `check50`. But be sure to compile and test it yourself as well!
