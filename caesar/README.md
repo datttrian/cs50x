@@ -257,7 +257,7 @@ int main(void)
 
 // For each character in the plaintext:
 
-// Rotate the character if it's a letter
+    // Rotate the character if it's a letter
 }
 ```
 
