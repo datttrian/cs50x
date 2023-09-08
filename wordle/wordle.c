@@ -38,7 +38,6 @@ int main(int argc, string argv[])
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-
     // Convert the command-line argument to an integer and store it as 'wordsize'.
     wordsize = atoi(argv[1]);
 
@@ -91,6 +90,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
+        memset(status, WRONG, sizeof(status));
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
@@ -121,6 +121,12 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
+    // Repeatedly prompt the user for a guess until they enter a word of the correct length (equal to 'wordsize').
+    do
+    {
+        guess = get_string("Input a %d-letter word: ", wordsize);
+    }
+    while (strlen(guess) != wordsize);
 
     return guess;
 }
