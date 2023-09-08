@@ -39,7 +39,6 @@ If you’d like some inspiration from past students, here are just a few:
   interactive story
 - [Intersection](https://scratch.mit.edu/projects/75390754/), a game
 - [Hogwarts](https://scratch.mit.edu/projects/422258685), a game
-- [Geometry Dash](https://scratch.mit.edu/projects/889341904/), a game
 
 You might find these
 [tutorials](https://scratch.mit.edu/projects/editor/?tutorial=all) or
