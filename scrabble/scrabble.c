@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
+#define UPPERCASE_LETTERS_START 'A'
+#define LOWERCASE_LETTERS_START 'a'
+
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
@@ -44,11 +47,11 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            score += POINTS[word[i] - 'A'];
+            score += POINTS[word[i] - UPPERCASE_LETTERS_START];
         }
         else if (islower(word[i]))
         {
-            score += POINTS[word[i] - 'a'];
+            score += POINTS[word[i] - LOWERCASE_LETTERS_START];
         }
     }
 
