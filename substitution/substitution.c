@@ -18,11 +18,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Store the key from the command line argument and find its length.
+    // Check if the key has exactly 26 characters.
     string key = argv[1];
     int keyLength = strlen(key);
-
-    // Check if the key has exactly 26 characters.
     if (keyLength != LETTERS_COUNT)
     {
         printf("Key must contain %d characters.\n", LETTERS_COUNT);
@@ -55,7 +53,7 @@ int main(int argc, string argv[])
         used[index] = true;
     }
 
-    // Prompt for plaintext input.
+    // Prompt the user for plaintext
     printf("plaintext: ");
     string plaintext = get_string("");
 

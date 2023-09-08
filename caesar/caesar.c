@@ -35,7 +35,7 @@ int main(int argc, string argv[])
     // Prompt the user for plaintext
     string plaintext = get_string("plaintext: ");
 
-    // For each character in the plaintext:
+    // Encrypt and print ciphertext.
     printf("ciphertext: ");
     for (int i = 0; plaintext[i] != '\0'; i++)
     {
