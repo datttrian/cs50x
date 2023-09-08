@@ -140,11 +140,34 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // HINTS
     // iterate over each letter of the guess
-        // iterate over each letter of the choice
-            // compare the current guess letter to the current choice letter
-                // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
-                // if it's in the word, but not the right spot, score CLOSE point (yellow)
-        // keep track of the total score by adding each individual letter's score from above
+    // iterate over each letter of the choice
+    // compare the current guess letter to the current choice letter
+    // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
+    // if it's in the word, but not the right spot, score CLOSE point (yellow)
+    // keep track of the total score by adding each individual letter's score from above
+    for (int i = 0; i < wordsize; i++)
+    {
+        // Compare each letter in the user's guess with the corresponding letter in the 'choice'.
+        if (guess[i] == choice[i])
+        {
+            // Assign 'EXACT' (2) points and update 'status' if letters match in the same position.
+            status[i] = EXACT;
+            score += EXACT;
+        }
+        else
+        {
+            for (int j = 0; j < wordsize; j++)
+            {
+                // Assign 'CLOSE' (1) point and update 'status' if letters don't match in the same position but are in 'choice'.
+                if (guess[i] == choice[j] && status[j] == WRONG)
+                {
+                    status[j] = CLOSE;
+                    score += CLOSE;
+                    break;
+                }
+            }
+        }
+    }
 
     return score;
 }
