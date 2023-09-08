@@ -418,13 +418,7 @@ Hints
   range from 0 to 127. Try printing characters temporarily as numbers
   (using `%i` instead of `%c`) to see what values you’re printing!
 
-## [Walkthrough](#walkthrough)
-
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=V2uusmv2wxI) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=V2uusmv2wxI)
 
 ## [How to Test Your Code](#how-to-test-your-code)
 
