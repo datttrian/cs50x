@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     // Check if the program was called with the correct number of command-line arguments.
     if (argc != 2)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage: %s key\n", argv[0]);
         return 1;
     }
 

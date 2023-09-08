@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("Usage: %s key\n", argv[0]);
-        return 1; // Exit the program with an error code.
+        return 1;
     }
 
     // Store the key from the command line argument and find its length.
