@@ -136,8 +136,9 @@ Sanders stage, we’ll print one byte per line for clarity.
 ``` highlight
 # ./bulbs
 Message: HI!
-
-
+⚫🟡⚫⚫🟡⚫⚫⚫
+⚫🟡⚫⚫🟡⚫⚫🟡
+⚫⚫🟡⚫⚫⚫⚫🟡
 ```
 
 To check our work, we can read a bulb that’s on
@@ -159,11 +160,12 @@ Another example:
 ``` highlight
 # ./bulbs
 Message: HI MOM
-
-
-
-
-
+⚫🟡⚫⚫🟡⚫⚫⚫
+⚫🟡⚫⚫🟡⚫⚫🟡
+⚫⚫🟡⚫⚫⚫⚫⚫
+⚫🟡⚫⚫🟡🟡⚫🟡
+⚫🟡⚫⚫🟡🟡🟡🟡
+⚫🟡⚫⚫🟡🟡⚫🟡
 ```
 
 Notice that all characters are included in the lightbulb instructions,
