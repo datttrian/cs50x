@@ -85,7 +85,23 @@ void add_items(void)
     menu[3].item = "Cheese Dog";
     menu[3].price = 7.00;
 
-    // Add more items to the menu here if needed
+    menu[4].item = "Fries";
+    menu[4].price = 5.00;
+
+    menu[5].item = "Cheese Fries";
+    menu[5].price = 6.00;
+
+    menu[6].item = "Cold Pressed Juice";
+    menu[6].price = 7.00;
+
+    menu[7].item = "Cold Brew";
+    menu[7].price = 3.00;
+
+    menu[8].item = "Water";
+    menu[8].price = 2.00;
+
+    menu[9].item = "Soda";
+    menu[9].price = 2.00;
 }
 
 // Search through the menu array to find an item's cost
