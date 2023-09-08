@@ -18,7 +18,7 @@ only to the following requirements:
   lecture (many of which, though instructive, were quite short) but it
   can be less complex than
   [Oscartime](https://scratch.mit.edu/projects/277537196) and [Ivy’s
-  Hardest Game](https://scratch.mit.edu/projects/326129433).
+  Hardest Game](https://scratch.mit.edu/projects/889341904/).
 
 To meet these requirements, your project should probably use a few dozen
 puzzle pieces overall. And your code should ideally be not only correct
