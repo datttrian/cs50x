@@ -39,6 +39,17 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
 
+    // Convert the command-line argument to an integer and store it as 'wordsize'.
+    wordsize = atoi(argv[1]);
+
+    // Verify that 'wordsize' is within the acceptable range (5 to 8).
+    if (wordsize < 5 || wordsize > 8)
+    {
+        // Print an error message and return an error code if 'wordsize' is invalid.
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
+    }
+
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
     sprintf(wl_filename, "%i.txt", wordsize);
