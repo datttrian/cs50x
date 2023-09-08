@@ -4,13 +4,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Define macros for uppercase letters start, lowercase letters start, and total letter count.
 #define UPPERCASE_LETTERS_START 'A'
 #define LOWERCASE_LETTERS_START 'a'
 #define LETTERS_COUNT 26
 
 int main(int argc, string argv[])
 {
-    // Make sure the program was run with just one command-line argument
+    // Check if the program was called with the correct number of command-line arguments.
     if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
