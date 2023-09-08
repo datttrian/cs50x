@@ -110,6 +110,15 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
+    // Print the game result based on whether the player won or ran out of guesses.
+    if (won)
+    {
+        printf("You won!\n");
+    }
+    else
+    {
+        printf("You ran out of guesses. The word was: %s\n", choice);
+    }
 
     // that's all folks!
     return 0;
