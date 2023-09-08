@@ -12,7 +12,16 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
+    // Make sure every character in argv[1] is a digit
+    string key_str = argv[1];
+    for (int i = 0; key_str[i] != '\0'; i++)
+    {
+        if (!isdigit(key_str[i]))
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
+    }
 
     // Convert argv[1] from a `string` to an `int`
     int key = atoi(key_str) % 26;;
