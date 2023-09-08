@@ -42,7 +42,7 @@ int main(int argc, string argv[])
         char rotated_char = plaintext[i];
         if (isalpha(plaintext[i]))
         {
-            char base = islower(plaintext[i]) ? LOWERCASE_LETTERS_START : UPPERCASE_LETTERS_START;
+            char base = isupper(plaintext[i]) ? UPPERCASE_LETTERS_START : LOWERCASE_LETTERS_START;
             rotated_char = (rotated_char - base + key) % LETTERS_COUNT + base;
         }
         printf("%c", rotated_char);
