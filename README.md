@@ -18,7 +18,7 @@
 
 ## Week 3 Algorithms
 
-- Lab: Sort
+- Lab: [Sort](/sort)
 - Practice Problem: Recursive atoi, Average High Temperatures, Max, Snackbar
 - Problem Set: Plurality, Runoff, Tideman
 

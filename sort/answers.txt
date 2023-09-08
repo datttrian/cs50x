@@ -1,7 +1,8 @@
 sort1 uses: TODO Bubble Sort
 
 How do you know?: TODO
-
+time ./sort1 sorted50000.txt -> 0m0.334s -> sort1 uses Bubble Sort
+time ./sort3 sorted50000.txt -> 0m2.240s
 
 sort2 uses: TODO Merge Sort
 
@@ -13,6 +14,4 @@ time ./sort3 random10000.txt -> 0m0.159s
 sort3 uses: TODO Selection Sort
 
 How do you know?: TODO
-reversed50,000.txt -> 4.021s
-sorted50,000.txt -> 3.574s
-It was the slowest sorting program in both a reversed number text file, as well as a sorted text file. Hence we can conclude that this is selection sort.
+sort2 uses Merge Sort, sort1 uses Bubble Sort -> sort3 uses Selection Sort
