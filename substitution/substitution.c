@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     if (keyLength != LETTERS_COUNT)
     {
         printf("Key must contain %d characters.\n", LETTERS_COUNT);
-        return 1; // Exit the program with an error code.
+        return 1;
     }
 
     // Create an array to keep track of used characters in the key.
@@ -37,7 +37,7 @@ int main(int argc, string argv[])
         if (!isalpha(key[i]))
         {
             printf("Key must contain only alphabetic characters.\n");
-            return 1; // Exit the program with an error code.
+            return 1;
         }
 
         // Convert the character to lowercase and calculate its index in the alphabet.
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
         if (used[index])
         {
             printf("Key must contain each letter exactly once.\n");
-            return 1; // Exit the program with an error code.
+            return 1;
         }
 
         used[index] = true;
@@ -77,5 +77,5 @@ int main(int argc, string argv[])
     }
     printf("\n");
 
-    return 0; // Exit the program with a success code.
+    return 0;
 }
