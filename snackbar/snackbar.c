@@ -107,27 +107,15 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    // Convert the input item to lowercase for case-insensitive comparison
-    for (int i = 0; item[i]; i++)
-    {
-        item[i] = tolower(item[i]);
-    }
-
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        // Convert the menu item to lowercase for case-insensitive comparison
-        string menuItem = menu[i].item;
-        for (int j = 0; menuItem[j]; j++)
-        {
-            menuItem[j] = tolower(menuItem[j]);
-        }
-
-        if (strcmp(item, menuItem) == 0)
+        // Use strcasecmp for case-insensitive comparison
+        if (strcasecmp(item, menu[i].item) == 0)
         {
             return menu[i].price;
         }
     }
 
-    // If the item is not found, return 0.0
+    // Return 0 if the item is not found
     return 0.0;
 }
