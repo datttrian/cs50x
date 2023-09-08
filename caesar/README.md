@@ -91,9 +91,10 @@ generally called *ciphertext*. And the secret used is called a *key*.
 To be clear, then, here’s how encrypting `HELLO` with a key of $1$
 yields `IFMMP`:
 
-Loading, please wait
-
-[TABLE]
+|  plaintext   |  H  |  E  |  L  |  L  |  O  |
+|--------------|----|----|----|----|----|
+|  + key       |  1  |  1  |  1  |  1  |  1  |
+|  = ciphertext|  I  |  F  |  M  |  M  |  P  |
 
 More formally, Caesar’s algorithm (i.e., cipher) encrypts messages by
 “rotating” each letter by $k$ positions. More formally, if $p$ is some
@@ -187,10 +188,6 @@ program:
 $ ./caesar 1 2 3
 Usage: ./caesar key
 ```
-
-Watch a Recording
-
-Recorded with [asciinema](https://asciinema.org)
 
 ## [Specification](#specification)
 
