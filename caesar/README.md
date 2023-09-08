@@ -156,11 +156,7 @@ ciphertext: or fher gb qevax lbhe Binygvar
 
 Why?
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=9K4FsAHB-C8) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=9K4FsAHB-C8)
 
 Notice that the case of the original message has been preserved.
 Lowercase letters remain lowercase, and uppercase letters remain
