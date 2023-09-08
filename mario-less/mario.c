@@ -1,14 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-// This function repeats a character 'c' 'times' number of times and prints them.
-void repeat(char c, int times)
-{
-    while (--times >= 0)
-    {
-        printf("%c", c);
-    }
-}
+void repeat(char c, int times);
 
 int main(void)
 {
@@ -30,5 +23,14 @@ int main(void)
 
         // Move to the next line after printing each row
         printf("\n");
+    }
+}
+
+// This function repeats a character 'c' 'times' number of times and prints them.
+void repeat(char c, int times)
+{
+    while (--times >= 0)
+    {
+        printf("%c", c);
     }
 }
