@@ -5,8 +5,6 @@
 - Practice using `struct`s
 - Write a linear search algorithm
 
-![Beach Image](beach-g1e2b206d7_1280.jpg)
-
 ## [Background](#background)
 
 Imagine you’re at the beach and want to order a number of items from the
