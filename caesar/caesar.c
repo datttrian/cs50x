@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define UPPERCASE_LETTERS_START A
+#define LOWERCASE_LETTERS_START a
+
 int main(int argc, string argv[])
 {
     // Make sure the program was run with just one command-line argument
@@ -14,7 +17,7 @@ int main(int argc, string argv[])
 
     // Make sure every character in argv[1] is a digit
     string key_str = argv[1];
-    for (int i = 0; key_str[i] != '\0'; i++)
+    for (int i = 0; i < strlen(str); i++)
     {
         if (!isdigit(key_str[i]))
         {
@@ -37,7 +40,7 @@ int main(int argc, string argv[])
         char rotated_char = plaintext[i];
         if (isalpha(plaintext[i]))
         {
-            char base = islower(plaintext[i]) ? 'a' : 'A';
+            char base = islower(plaintext[i]) ? LOWERCASE_LETTERS_START : UPPERCASE_LETTERS_START;
             rotated_char = (rotated_char - base + key) % 26 + base;
         }
         printf("%c", rotated_char);
