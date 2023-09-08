@@ -176,6 +176,24 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
+    for (int i = 0; i < wordsize; i++)
+    {
+        // Print each letter with the appropriate color code based on the 'status' array.
+        // Use green for 'EXACT', yellow for 'CLOSE', and red for 'WRONG'.
+        // Reset the color after each letter.
+        if (status[i] == EXACT)
+        {
+            printf(GREEN "%c" RESET, guess[i]);
+        }
+        else if (status[i] == CLOSE)
+        {
+            printf(YELLOW "%c" RESET, guess[i]);
+        }
+        else
+        {
+            printf(RED "%c" RESET, guess[i]);
+        }
+    }
 
     printf("\n");
     return;
