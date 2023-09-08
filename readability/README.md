@@ -336,11 +336,7 @@ number is less than 1, your program should output `"Before Grade 1"`.
 
 ## [Walkthrough](#walkthrough)
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=AOVyZEh9zgE) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=AOVyZEh9zgE)
 
 ## [How to Test Your Code](#how-to-test-your-code)
 
