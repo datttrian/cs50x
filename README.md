@@ -19,7 +19,7 @@
 ## Week 3 Algorithms
 
 - Lab: [Sort](/sort)
-- Practice Problem: [Recursive atoi](/atoi), [Average High Temperatures](/temps), Max, Snackbar
+- Practice Problem: [Recursive atoi](/atoi), [Average High Temperatures](/temps), [Max](/max), Snackbar
 - Problem Set: Plurality, Runoff, Tideman
 
 ## Week 4 Memory
