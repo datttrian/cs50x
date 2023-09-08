@@ -2,9 +2,11 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#define UPPERCASE_LETTERS_START A
-#define LOWERCASE_LETTERS_START a
+#define UPPERCASE_LETTERS_START 'A'
+#define LOWERCASE_LETTERS_START 'a'
+#define LETTERS_COUNT 26
 
 int main(int argc, string argv[])
 {
@@ -17,7 +19,7 @@ int main(int argc, string argv[])
 
     // Make sure every character in argv[1] is a digit
     string key_str = argv[1];
-    for (int i = 0; i < strlen(str); i++)
+    for (int i = 0; i < strlen(key_str); i++)
     {
         if (!isdigit(key_str[i]))
         {
@@ -41,7 +43,7 @@ int main(int argc, string argv[])
         if (isalpha(plaintext[i]))
         {
             char base = islower(plaintext[i]) ? LOWERCASE_LETTERS_START : UPPERCASE_LETTERS_START;
-            rotated_char = (rotated_char - base + key) % 26 + base;
+            rotated_char = (rotated_char - base + key) % LETTERS_COUNT + base;
         }
         printf("%c", rotated_char);
     }
