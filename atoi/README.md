@@ -94,7 +94,7 @@ The actual version of `atoi` must handle negative numbers, as well as
 leading spaces and non-numeric characters. It might look something like
 this:
 
-``` highlight
+``` c
 #include <stdio.h>
 
 // Iterative function to implement `atoi()` function in C
