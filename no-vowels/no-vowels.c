@@ -7,6 +7,12 @@
 #include <stdio.h>
 #include <string.h>
 
+// Define character constants for vowels
+#define VOWEL_A 54 // 'a' will be replaced with 54 ('6')
+#define VOWEL_E 51 // 'e' will be replaced with 51 ('3')
+#define VOWEL_I 49 // 'i' will be replaced with 49 ('1')
+#define VOWEL_O 48 // 'o' will be replaced with 48 ('0')
+
 string replace(string input_string);
 
 int main(int argc, string argv[])
@@ -28,16 +34,16 @@ string replace(string input_string)
         switch (input_string[i]) // check the current character
         {
             case 'a':
-                input_string[i] = 54; // replace 'a' with ASCII code 54 ('6')
+                input_string[i] = VOWEL_A;
                 break;
             case 'e':
-                input_string[i] = 51; // replace 'e' with ASCII code 51 ('3')
+                input_string[i] = VOWEL_E;
                 break;
             case 'i':
-                input_string[i] = 49; // replace 'i' with ASCII code 49 ('1')
+                input_string[i] = VOWEL_I;
                 break;
             case 'o':
-                input_string[i] = 48; // replace 'o' with ASCII code 48 ('0')
+                input_string[i] = VOWEL_O;
                 break;
         }
     }
