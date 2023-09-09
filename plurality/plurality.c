@@ -71,10 +71,10 @@ bool vote(string name)
         if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
-            return true; // Valid vote
+            return true;
         }
     }
-    return false; // Invalid vote (name not found)
+    return false; // name not found
 }
 
 // Print the winner (or winners) of the election

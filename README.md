@@ -20,7 +20,7 @@
 
 - Lab: [Sort](/sort)
 - Practice Problem: [Recursive atoi](/atoi), [Average High Temperatures](/temps), [Max](/max), [Snackbar](/snackbar)
-- Problem Set: Plurality, Runoff, Tideman
+- Problem Set: [Plurality](/plurality), Runoff, Tideman
 
 ## Week 4 Memory
 
