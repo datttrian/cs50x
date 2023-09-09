@@ -40,7 +40,7 @@ int main(int argc, string argv[])
     // Convert the string argument to integer
     int key = atoi(key_str);
 
-    // Prompt the user to enter plaintext
+    // Display "plaintext: " to prompt the user input a string and store it in plaintext
     string plaintext = get_string("plaintext: ");
 
     // Display "ciphertext: "

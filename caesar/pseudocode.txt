@@ -4,7 +4,7 @@
 4. Loop through each character in the argument string:
    - If it's not a digit, print an error message ("Usage: program_name key") and exit with an error code (1).
 5. Convert the string argument to integer.
-6. Prompt the user to enter plaintext.
+6. Display "plaintext: " to prompt the user input a string and store it in plaintext.
 7. Display "ciphertext: ".
 8. Loop through each character in the plaintext:
    - Initialize variables rotated_char to store the character
