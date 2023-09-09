@@ -31,7 +31,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Create an array to keep track of used characters in the key
+    // Create an array of false values to keep track of used characters in the key
     bool used[LETTERS_COUNT] = {false};
 
     // Loop through the key characters and perform checks
