@@ -1,24 +1,19 @@
 # TODO
+from cs50 import get_int
+
 def main():
-    # Prompt the user for the half-pyramid's height
     while True:
-        height = get_height()
-        if height >= 1 and height <= 8:
+        height = get_int("Height: ")
+        width = height + 1
+        if height >= 0 and height <= 23:
             break
 
-    # Generate the half-pyramid
     for i in range(1, height + 1):
-        spaces = " " * (height - i)
-        hashes = "#" * i
-        print(spaces + hashes)
+        num_hashes = i + 1
+        num_spaces = width - num_hashes
 
-
-def get_height():
-    try:
-        height = int(input("Height: "))
-        return height
-    except ValueError:
-        return -1
+        print(" " * num_spaces, end="")
+        print("#" * num_hashes)
 
 
 if __name__ == "__main__":
