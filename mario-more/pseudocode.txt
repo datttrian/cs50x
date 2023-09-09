@@ -1,10 +1,9 @@
-1. Ask the user to input a positive integer 'n' (the height of the pyramid).
-
-If the input 'n' is not between 1 and 8 (inclusive), go back to step 2 and ask for 'n' again until a valid input is received.
-
-For each row from 1 to 'n':
-a. Print spaces equal to 'n - row_number'.
-b. Print hash symbols ('#') equal to 'row_number' for the left half of the pyramid.
-c. Print two spaces (" ").
-d. Print hash symbols ('#') equal to 'row_number' for the right half of the pyramid.
-e. Move to the next line for the next row.
+1. Repeat the following steps until n is between 1 and 8 (inclusive):
+   - Display "Positive Number: " to the user
+   - Input a positive integer and store it in n
+2. For each row from 1 to 'n':
+   - Print spaces equal to 'n - the current row number'.
+   - Print hash symbols ('#') equal to 'the current row number' for the left half of the pyramid.
+   - Print two spaces (" ").
+   - Print hash symbols ('#') equal to 'the current row number' for the right half of the pyramid.
+   - Move to the next line for the next row.
