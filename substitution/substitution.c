@@ -51,7 +51,7 @@ int main(int argc, string argv[])
         }
 
         // Calculate the character position in the alphabet and store it to an integer index
-        int index = tolower(key[i]) - UPPERCASE_LETTERS_START;
+        int index = tolower(key[i]) - LOWERCASE_LETTERS_START;
 
         // If the element in the used array at the specified index is true
         if (used[index])
