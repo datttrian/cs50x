@@ -1,9 +1,9 @@
 1. Prompt the user to input a text string and store it in the 'text' variable.
-2. Count the number of letters in the 'text':
-   a. Initialize a counter 'letters_count' to 0.
-   b. Loop through each character in 'text':
-      i. Check if the character is alphabetic (using 'isalpha' function).
-      ii. If it's alphabetic, increment 'letters_count' by 1.
+2. Count the number of letters in the input text:
+   - Initialize a counter 'letters_count' to 0.
+   - Loop through each character in 'text':
+      * Check if the character is alphabetic (using 'isalpha' function).
+      * If it's alphabetic, increment 'letters_count' by 1.
 3. Count the number of words in the 'text':
    a. Initialize a counter 'words_count' to 1 (assuming the last word doesn't end with a space).
    b. Loop through each character in 'text':

@@ -44,10 +44,13 @@ int main(void)
 // Count the number of letters in the input text
 int count_letters(string text)
 {
+    // Initialize a counter 'letters_count' to 0
     int count = 0;
+
+    // Loop through each character in 'text'
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        // Check if the character at position 'i' is alphabetic
+        // Check if the character is alphabetic
         if (isalpha(text[i]))
         {
             count++;
