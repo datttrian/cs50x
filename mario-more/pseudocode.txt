@@ -1,7 +1,7 @@
 1. Display "Positive Number: " to prompt the user input a positive integer between 1 and 8 and store it in n.
 2. For each row from 1 to 'n':
-   - Print spaces equal to 'n - the current row number'.
-   - Print hash symbols ('#') equal to 'the current row number' for the left half of the pyramid.
-   - Print two spaces (" ").
-   - Print hash symbols ('#') equal to 'the current row number' for the right half of the pyramid.
+   - Print 'n - the current row number' spaces.
+   - Print 'the current row number' hash symbols ('#') for the left half of the pyramid.
+   - Print 'two' spaces (" ").
+   - Print 'the current row number' hash symbols ('#') for the right half of the pyramid.
    - Move to the next line for the next row.

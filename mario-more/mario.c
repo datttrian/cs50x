@@ -14,13 +14,13 @@ int main(void)
     // For each row from 1 to 'n'
     for (int i = 1; i <= n; i++)
     {
-        // Inner loop for n - i spaces before the hashes
+        // Print 'n - the current row number' spaces
         for (int j = 1; j <= n - i; j++)
         {
             printf(" ");
         }
 
-        // Inner loop for i left hashes
+        // Print 'the current row number' hash symbols ('#') for the left half of the pyramid
         for (int k = 1; k <= i; k++)
         {
             printf("#");

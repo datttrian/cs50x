@@ -14,7 +14,7 @@ int main(void)
     // For each row from 1 to 'n'
     for (int i = 1; i <= n; i++)
     {
-        // Print spaces equal to 'n - the current row number'
+        // Print 'n - the current row number' spaces
         for (int j = 1; j <= n - i; j++)
         {
             printf(" ");
