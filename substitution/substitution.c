@@ -37,9 +37,10 @@ int main(int argc, string argv[])
     // Loop through the key characters and perform checks
     for (int i = 0; i < keyLength; i++)
     {
-        // Check if the character is not alphabetic
+        // If the character is not alphabetic
         if (!isalpha(key[i]))
         {
+            // Print an error message ("Key must contain only alphabetic characters.\n")
             printf("Key must contain only alphabetic characters.\n");
             return 1;
         }
