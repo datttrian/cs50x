@@ -11,17 +11,25 @@
 
 int main(int argc, string argv[])
 {
-    // Check if the program was called with the correct number of command-line arguments.
+    // Check if the program was called with 2 command-line arguments
     if (argc != 2)
     {
+        // If the argument count is not 2, print an error message
         printf("Usage: %s key\n", argv[0]);
+
+        // Exit with an error code 1
         return 1;
     }
 
     // Make sure every character in argv[1] is a digit
+
+    // Store the second command-line argument as a string
     string key_str = argv[1];
+
+    // Loop through each character in the argument:
     for (int i = 0; i < strlen(key_str); i++)
     {
+        // If it's not a digit, print an error message ("Usage: program_name key") and exit with an error code (1).
         if (!isdigit(key_str[i]))
         {
             printf("Usage: ./caesar key\n");
