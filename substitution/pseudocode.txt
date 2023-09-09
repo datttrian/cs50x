@@ -22,6 +22,6 @@
     - If the character is alphabetic:
        * Calculate its index in the alphabet.
        * Replace the character with the corresponding character from the key while maintaining the case.
-    - If the character is not alphabetic, add it to the ciphertext unchanged.
-
-11. Print the ciphertext.
+       * Print the character.
+    - If the character is not alphabetic:
+       * Print the character unchanged.

@@ -82,7 +82,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            // If the character is not alphabetic, print it as is
+            // Print the character unchanged
             printf("%c", c);
         }
     }
