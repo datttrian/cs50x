@@ -6,7 +6,7 @@
 5. If keyLength is not 26
    - Print an error message ("Key must contain 26 characters")
    - Exit with an error code (1).
-6. Create an array of false values to keep track of used characters in the key.
+6. Create an array used of false values to keep track of used characters in the key.
 7. Loop through each character in the key:
    - If keyLength is not 26
       * Print an error message ("Key must contain only alphabetic characters.\n")
