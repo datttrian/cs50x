@@ -12,7 +12,7 @@
    - If the character is not alphabetic
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).
-   - Convert the character to lowercase and calculate its index in the alphabet.
+   - Calculate the character position in the alphabet and store it to an integer index.
    - If the index of array used is true
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).

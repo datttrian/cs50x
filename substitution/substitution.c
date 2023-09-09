@@ -47,8 +47,8 @@ int main(int argc, string argv[])
             return 1;
         }
 
-        // Convert the character to lowercase and calculate its index in the alphabet
-        int index = tolower(key[i]) - LOWERCASE_LETTERS_START;
+        // Calculate the character position in the alphabet and store it to an integer index
+        int index = tolower(key[i]) - UPPERCASE_LETTERS_START;
 
         // Check if the character has already been used in the key
         if (used[index])
