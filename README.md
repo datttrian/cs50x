@@ -37,7 +37,7 @@
 ## Week 6 Python
 
 - Lab: [World Cup](/world-cup)
-- Practice Problem: Bank, Frank, Jar, Seven Day Average, Taqueria
+- Practice Problem: [Bank](/bank), Frank, Jar, Seven Day Average, Taqueria
 - Problem Set: Hello, Mario Less, Mario More, Cash, Credit, Readability, DNA
 
 ## Week 7 SQL
