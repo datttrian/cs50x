@@ -50,7 +50,7 @@ int main(int argc, string argv[])
     // Loop through each character in the plaintext
     for (int i = 0; plaintext[i] != '\0'; i++)
     {
-        // Initialize variables rotated_char to store the inputted plaintext
+        // Initialize variables rotated_char to store the character
         char rotated_char = plaintext[i];
 
         // If the character is a letter,
@@ -58,7 +58,7 @@ int main(int argc, string argv[])
         {
             // Determine the base character based on the case of it
             char base = isupper(plaintext[i]) ?
-                UPPERCASE_LETTERS_START : // set 'base' to the letter 'A'
+                UPPERCASE_LETTERS_START :
                 LOWERCASE_LETTERS_START;
 
             // Shift the letter in the alphabet by the uppercase or lowercase letter start value accordingly
