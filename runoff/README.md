@@ -39,8 +39,6 @@ But the plurality vote does have some disadvantages. What happens, for
 instance, in an election with three candidates, and the ballots below
 are cast?
 
-![Five ballots, tie betweeen Alice and Bob](../fptp_ballot_1.png)
-
 A plurality vote would here declare a tie between Alice and Bob, since
 each has two votes. But is that the right outcome?
 
@@ -49,8 +47,6 @@ system. In a ranked-choice system, voters can vote for more than one
 candidate. Instead of just voting for their top choice, they can rank
 the candidates in order of preference. The resulting ballots might
 therefore look like the below.
-
-![Three ballots, with ranked preferences](../ranked_ballot_1.png)
 
 Here, each voter, in addition to specifying their first preference
 candidate, has also indicated their second and third choices. And now,
@@ -61,8 +57,6 @@ Alice could here be declared the winner.
 
 Ranked choice voting can also solve yet another potential drawback of
 plurality voting. Take a look at the following ballots.
-
-![Nine ballots, with ranked preferences](../ranked_ballot_3.png)
 
 Who should win this election? In a plurality vote where each voter
 chooses their first preference only, Charlie wins this election with
@@ -343,11 +337,7 @@ Complete the `eliminate` function.
 
 ## [Walkthrough](#walkthrough)
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=-Vc5aGywKxo) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=-Vc5aGywKxo)
 
 ## [Usage](#usage)
 

@@ -128,6 +128,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // Check if the name is a valid candidate name
     return false;
 }
 
