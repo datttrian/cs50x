@@ -6,10 +6,10 @@
 5. Convert the string argument to integer.
 6. Prompt the user to enter plaintext.
 7. Display "ciphertext: ".
-8. Initialize variables rotated_char to store the inputted plaintext.
-9. Loop through each character in the plaintext:
+8. Loop through each character in the plaintext:
+   - Initialize variables rotated_char to store the character
    - If the character is a letter:
       * Determine if it's uppercase or lowercase and shift the letter in the alphabet by the value accordingly.
       * Append the encrypted character to rotated_char.
    - Else, (the character is not a letter) do nothing.
-10. Print the ciphertext.
+9. Print the ciphertext.
