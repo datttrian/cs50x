@@ -15,14 +15,15 @@ int main(void)
     string text = get_string("Text: ");
 
     // Count the number of letters, words, and sentences in the input text
-    int letters = count_letters(text); // call count_letters(text) and store the result in 'letters_count'
-    int words = count_words(text); // call count_words(text) and store the result in 'words_count'
+    int letters = count_letters(text);     // call count_letters(text) and store the result in 'letters_count'
+    int words = count_words(text);         // call count_words(text) and store the result in 'words_count'
     int sentences = count_sentences(text); // call count_sentences(text) and store the result in 'sentences_count'
 
     // Calculate the Coleman-Liau index (CLI)
-    float L = (float) letters / words * 100; // calculate the average number of letters per 100 words (L)
+    float L = (float) letters / words * 100;   // calculate the average number of letters per 100 words (L)
     float S = (float) sentences / words * 100; // calculate the average number of sentences per 100 words (S)
-    int index = round(0.0588 * L - 0.296 * S - 15.8); // Calculate the index using the formula: index = 0.0588 * L - 0.296 * S - 15.8
+    int index =
+        round(0.0588 * L - 0.296 * S - 15.8); // Calculate the index using the formula: index = 0.0588 * L - 0.296 * S - 15.8
 
     // Determine the reading level based on the CLI:
     if (index > 16)
