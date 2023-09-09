@@ -60,11 +60,10 @@ int main(int argc, string argv[])
         used[index] = true;
     }
 
-    // Prompt the user for plaintex
-    printf("plaintext: ");
-    string plaintext = get_string("");
+    // Display "plaintext: " to prompt the user input a string and store it in plaintext
+    string plaintext = get_string("plaintext: ");
 
-    // Encrypt and print ciphertext
+    // Initialize an empty string (ciphertext) to store the encrypted text
     printf("ciphertext: ");
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
