@@ -21,7 +21,6 @@
 10. Loop through each character in the plaintext:
     - If the character is alphabetic:
        * Calculate its index in the alphabet.
-       * Replace the character with the corresponding character from the key while maintaining the case.
-       * Print the character.
+       * Print the character replaced with the corresponding character from the key while maintaining the case.
     - If the character is not alphabetic:
        * Print the character unchanged.
