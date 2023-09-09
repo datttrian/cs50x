@@ -10,7 +10,7 @@
 
 int main(int argc, string argv[])
 {
-    // Check if the program was called with 2 command-line arguments
+    // If the argument count is not 2
     if (argc != 2)
     {
         // Print an error message ("Usage: program_name key")
@@ -20,7 +20,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Store the second command-line argument and its length as a string and an integer
+    // Store the second command-line argument and its length as a string key and an integer keyLength
     string key = argv[1];
     int keyLength = strlen(key);
 
