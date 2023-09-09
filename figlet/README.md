@@ -107,8 +107,8 @@ Here’s how to test your code manually:
   program should print the following:
   ``` highlight
      ___________ __________
-  / ____/ ___// ____/ __ \
-  / /    \__ \/___ \/ / / /
+    / ____/ ___// ____/ __ \
+   / /    \__ \/___ \/ / / /
   / /___ ___/ /___/ / /_/ /
   \____//____/_____/\____/
   ```
@@ -119,7 +119,7 @@ Here’s how to test your code manually:
   |  |  |___| | |___      _ _ _ ___ ___| |_| |
   |     | -_| | | . |_   | | | | . |  _| | . |
   |__|__|___|_|_|___| |  |_____|___|_| |_|___|
-    |_|
+                    |_|
   ```
 - Run your program with `python figlet.py -f alphabet`. Type `Moo`. Your
   program should print the following:
