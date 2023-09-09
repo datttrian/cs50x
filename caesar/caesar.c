@@ -56,7 +56,7 @@ int main(int argc, string argv[])
         // If the character is a letter,
         if (isalpha(plaintext[i]))
         {
-            // Determine if it's uppercase or lowercase
+            // Determine the base character based on the case of it
             char base = isupper(plaintext[i]) ?
                 UPPERCASE_LETTERS_START : // set 'base' to the letter 'A'
                 LOWERCASE_LETTERS_START;
