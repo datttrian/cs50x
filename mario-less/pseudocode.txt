@@ -1,5 +1,5 @@
-1. Display "Positive Number: " to prompt the user input a positive integer between 1 and 8 and store it in n.
-2. For each row from 1 to the positive integer:
-   - Print 'the positive integer - the current row number' spaces.
-   - Print 'the current row number' hash symbols ('#') for the pyramid.
+1. Display "Positive Number: " to prompt the user input a positive integer between 1 and 8 and store it in 'n'.
+2. For each row from '1' to 'n':
+   - Print 'n - row' spaces.
+   - Print 'row' hash symbols ('#') for the pyramid.
    - Move to the next line for the next row.

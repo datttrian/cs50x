@@ -11,17 +11,17 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    // For each row from 1 to 'n'
-    for (int i = 1; i <= n; i++)
+    // For each row from '1' to 'n'
+    for (int row = 1; row <= n; i++) // outer loop for rows
     {
-        // Print 'n - the current row number' spaces
-        for (int j = 1; j <= n - i; j++)
+        // Print 'n - row' spaces
+        for (int i = 1; i <= n - i; i++) // inner loop for spaces before the hashes
         {
             printf(" ");
         }
 
-        // Print 'the current row number' hash symbols ('#') for the pyramid
-        for (int k = 1; k <= i; k++)
+        // Print 'row' hash symbols ('#') for the pyramid
+        for (int j = 1; j <= i; j++) // inner loop for left hashes
         {
             printf("#");
         }
