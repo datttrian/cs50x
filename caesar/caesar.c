@@ -61,7 +61,7 @@ int main(int argc, string argv[])
                 UPPERCASE_LETTERS_START :
                 LOWERCASE_LETTERS_START;
 
-            // Shift the letter in the alphabet by the uppercase or lowercase letter start value accordingly
+            // Update the rotated character using the Caesar cipher algorithm
             rotated_char = (rotated_char - base + key) % LETTERS_COUNT + base;
         }
         printf("%c", rotated_char);
