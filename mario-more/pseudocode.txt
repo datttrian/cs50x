@@ -2,6 +2,6 @@
 2. For each row from 1 to 'n':
    - Print 'n - the current row number' spaces.
    - Print 'the current row number' hash symbols ('#') for the left half of the pyramid.
-   - Print 'two' spaces (" ").
+   - Print 'two' spaces (" ") for the gap between pyramids.
    - Print 'the current row number' hash symbols ('#') for the right half of the pyramid.
    - Move to the next line for the next row.

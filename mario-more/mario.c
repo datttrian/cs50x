@@ -26,10 +26,10 @@ int main(void)
             printf("#");
         }
 
-        // Gap between pyramids
+        // Print 'two' spaces (" ") for the gap between pyramids
         printf("  ");
 
-        // Inner loop for i right hashes
+        // Print 'the current row number' hash symbols ('#') for the right half of the pyramid
         for (int l = 1; l <= i; l++)
         {
             printf("#");
