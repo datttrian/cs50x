@@ -57,9 +57,7 @@ int main(int argc, string argv[])
         if (isalpha(plaintext[i]))
         {
             // Determine the base character based on the case of it
-            char base = isupper(plaintext[i]) ?
-                UPPERCASE_LETTERS_START :
-                LOWERCASE_LETTERS_START;
+            char base = isupper(plaintext[i]) ? UPPERCASE_LETTERS_START : LOWERCASE_LETTERS_START;
 
             // Update the rotated character using the Caesar cipher algorithm
             rotated_char = (rotated_char - base + key) % LETTERS_COUNT + base;

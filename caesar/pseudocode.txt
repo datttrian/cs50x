@@ -9,7 +9,7 @@
 8. Loop through each character in the plaintext:
    - Initialize variables rotated_char to store the character
    - If the character is a letter:
-      * Determine if it's uppercase or lowercase and shift the letter in the alphabet by the value accordingly.
-      * Append the encrypted character to rotated_char.
+      * Determine the base character based on the case of it.
+      * Update the rotated character using the Caesar cipher algorithm.
    - Else, (the character is not a letter) do nothing.
 9. Print the ciphertext.
