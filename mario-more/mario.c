@@ -11,31 +11,31 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    // For each row from 1 to 'n'
-    for (int i = 1; i <= n; i++)
+    // For each row from '1' to 'n'
+    for (int row = 1; row <= n; row++)
     {
-        // Print 'n - the current row number' spaces
-        for (int j = 1; j <= n - i; j++)
+        // Print 'n - row' spaces
+        for (int i = 1; i <= n - row; i++)
         {
             printf(" ");
         }
 
-        // Print 'the current row number' hash symbols ('#') for the left half of the pyramid
-        for (int k = 1; k <= i; k++)
+        // Print 'row' hash symbols ('#') for the left half of the pyramid
+        for (int j = 1; j <= row; j++)
         {
             printf("#");
         }
 
-        // Print 'two' spaces (" ") for the gap between pyramids
+        // Print 'two' spaces (" ") for the gap between the two pyramids
         printf("  ");
 
-        // Print 'the current row number' hash symbols ('#') for the right half of the pyramid
-        for (int l = 1; l <= i; l++)
+        // Print 'row' hash symbols ('#') for the right half of the pyramid
+        for (int k = 1; k <= row; k++)
         {
             printf("#");
         }
 
-        // Move to the next row
+        // Move to the next line for the next row
         printf("\n");
     }
 

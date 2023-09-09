@@ -12,16 +12,16 @@ int main(void)
     while (n < 1 || n > 8);
 
     // For each row from '1' to 'n'
-    for (int row = 1; row <= n; i++)
+    for (int row = 1; row <= n; row++)
     {
         // Print 'n - row' spaces
-        for (int i = 1; i <= n - i; i++)
+        for (int i = 1; i <= n - row; i++)
         {
             printf(" ");
         }
 
         // Print 'row' hash symbols ('#') for the pyramid
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= row; j++)
         {
             printf("#");
         }
