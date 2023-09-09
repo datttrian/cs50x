@@ -20,13 +20,13 @@ int main(void)
             printf(" ");
         }
 
-        // Inner loop for i hashes
+        // Print 'the current row number' hash symbols ('#') for the pyramid
         for (int k = 1; k <= i; k++)
         {
             printf("#");
         }
 
-        // Move to the next row
+        // Move to the next line for the next row
         printf("\n");
     }
 
