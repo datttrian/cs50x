@@ -188,7 +188,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    return false;
+    for
 }
 
 // Eliminate the candidate (or candidates) in last place
