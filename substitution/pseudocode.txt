@@ -19,9 +19,9 @@
 8. Display "plaintext: " to prompt the user input a string and store it in plaintext.
 9. Initialize an empty string (ciphertext) to store the encrypted text.
 10. Loop through each character in the plaintext:
-    a. If the character is alphabetic:
-       i. Calculate its index in the alphabet.
-       ii. Replace the character with the corresponding character from the key while maintaining the case.
-    b. If the character is not alphabetic, add it to the ciphertext unchanged.
+    - If the character is alphabetic:
+       * Calculate its index in the alphabet.
+       * Replace the character with the corresponding character from the key while maintaining the case.
+    - If the character is not alphabetic, add it to the ciphertext unchanged.
 
 11. Print the ciphertext.

@@ -60,19 +60,24 @@ int main(int argc, string argv[])
         used[index] = true;
     }
 
+    // Display "ciphertext: "
+    printf("ciphertext: ");
+
     // Display "plaintext: " to prompt the user input a string and store it in plaintext
     string plaintext = get_string("plaintext: ");
 
-    // Initialize an empty string (ciphertext) to store the encrypted text
-    printf("ciphertext: ");
+    // Loop through each character in the plaintext
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         char c = plaintext[i];
+
+        // If the character is alphabetic
         if (isalpha(c))
         {
+            // Calculate its index in the alphabet
             int index = isupper(c) ? c - UPPERCASE_LETTERS_START : c - LOWERCASE_LETTERS_START;
 
-            // Encrypt the character using the key and print the result
+            // Replace the character with the corresponding character from the key while maintaining the case
             printf("%c", isupper(c) ? toupper(key[index]) : tolower(key[index]));
         }
         else
