@@ -4,8 +4,7 @@ from cs50 import get_int
 def main():
     while True:
         height = get_int("Height: ")
-        width = height + 1
-        if height >= 0 and height <= 23:
+        if height >= 1 and height <= 8:
             break
 
     for i in range(1, height + 1):
