@@ -3,11 +3,9 @@
 3. Get the second command-line argument (argv[1]) and store it as a string.
 4. Loop through each character in the argument:
    - If it's not a digit, print an error message ("Usage: program_name key") and exit with an error code (1).
-5. Convert the string argument to an integer (the key).
-
-7. Prompt the user to enter plaintext.
-
-8. Initialize an empty string to store the ciphertext.
+5. Convert the string argument to an integer.
+6. Prompt the user to enter plaintext.
+7. Initialize an empty string to store the ciphertext.
 
 9. Loop through each character in the plaintext:
    a. If the character is a letter:
