@@ -5,7 +5,7 @@ import sys
 import random
 
 # Number of simluations to run
-N = 1000
+N = 1000000
 
 
 def main():
@@ -21,7 +21,6 @@ def main():
         for team in reader:
             team["rating"] = int(team["rating"])
             teams.append(team)
-
 
     # Keep track of number of wins for each team
     counts = {}
