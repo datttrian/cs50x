@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    // Display "Positive Number: " to prompt the user input a positive integer between 1 and 8 and store it in n
+    // Display "Height: " to prompt the user input a positive integer between 1 and 8 and store it in n
     int n;
     do
     {
-        n = get_int("Positive Number: ");
+        n = get_int("Height: ");
     }
     while (n < 1 || n > 8);
 
