@@ -22,14 +22,12 @@ def main():
             team["rating"] = int(team["rating"])
             teams.append(team)
 
-            
+
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    for _ in range(N):
+    for i in range(N):
         winner = simulate_tournament(teams)
-        # Convert the winning team's name to title case
-        winner = winner.title()
         if winner in counts:
             counts[winner] += 1
         else:
