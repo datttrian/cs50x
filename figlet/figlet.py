@@ -15,6 +15,7 @@ elif len(sys.argv) == 3 and (sys.argv[1] == "-f" or sys.argv[1] == "--font"):
     font_name = sys.argv[2]
 else:
     print_usage_and_exit()
+    sys.exit(1)
 
 user_text = input("Enter text: ")
 
