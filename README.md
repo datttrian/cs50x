@@ -38,7 +38,7 @@
 
 - Lab: [World Cup](/world-cup)
 - Practice Problem: [Bank](/bank), [Frank, Jar, Seven Day Average](/figlet), Taqueria
-- Problem Set: Hello, Mario Less, Mario More, Cash, Credit, Readability, DNA
+- Problem Set: Hello, [Mario Less](/sentimental-mario-less), Mario More, Cash, Credit, Readability, DNA
 
 ## Week 7 SQL
 
