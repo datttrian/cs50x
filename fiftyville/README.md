@@ -108,11 +108,7 @@ files.
 
 ## [Walkthrough](#walkthrough)
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=YHhgEoJMDnU) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=YHhgEoJMDnU)
 
 ## [Hints](#hints)
 

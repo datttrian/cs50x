@@ -44,7 +44,7 @@
 
 - Lab: Songs
 - Practice Problem: Favorites, Hall of Prophecy
-- Problem Set: Movies, Fiftyville
+- Problem Set: Movies, [Fiftyville](/fiftyville)
 
 ## Week 8 HTML, CSS, JavaScript
 
