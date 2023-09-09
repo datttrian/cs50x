@@ -6,7 +6,7 @@ int main(void)
     int n;
     do
     {
-        n = get_int("Positive Number: "); // prompt the user for a positive integer
+        n = get_int("Positive Number: ");
     }
     while (n < 1 || n > 8); // keep asking until the input is between 1 and 8 (inclusive)
 
