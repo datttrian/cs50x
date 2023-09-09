@@ -1,20 +1,27 @@
-1. Ask the user to input a credit card number as a long long integer.
-2. Initialize variables:
-   - digit1 and digit2 for tracking the current and previous digits.
-   - num_digits to count the number of digits processed.
-   - sum_of_double_odds for the sum of digits at odd positions after doubling.
-   - sum_of_evens for the sum of digits at even positions.
-   - is_valid as a boolean to store whether the card is valid.
-3. While there are digits in the credit card number:
-   - Extract the current digit and the previous digit.
-   - Determine if the current digit is at an even or odd position.
-   - If it's at an even position, add it to sum_of_evens.
-   - If it's at an odd position, double the digit and add its individual digits to sum_of_double_odds.
-   - Move to the next digit and increment num_digits.
-4. Check if the sum of sum_of_evens and sum_of_double_odds is a multiple of 10 (is_valid).
-5. Extract the first two digits of the credit card number.
-6. Check for conditions to identify the credit card company:
-   - If the first digit is 4, and the number of digits is between 13 and 16, and it's valid, print "VISA."
-   - If the first two digits are between 51 and 55, and the number of digits is 16, and it's valid, print "MASTERCARD."
-   - If the first two digits are 34 or 37, and the number of digits is 15, and it's valid, print "AMEX."
-   - If none of the above conditions are met, print "INVALID."
+1. Prompt the user to input a text string and store it in the 'text' variable.
+2. Count the number of letters in the 'text':
+   a. Initialize a counter 'letters_count' to 0.
+   b. Loop through each character in 'text':
+      i. Check if the character is alphabetic (using 'isalpha' function).
+      ii. If it's alphabetic, increment 'letters_count' by 1.
+3. Count the number of words in the 'text':
+   a. Initialize a counter 'words_count' to 1 (assuming the last word doesn't end with a space).
+   b. Loop through each character in 'text':
+      i. Check if the character is a whitespace character (using 'isspace' function).
+      ii. If it's a whitespace character, increment 'words_count' by 1.
+4. Count the number of sentences in the 'text':
+   a. Initialize a counter 'sentences_count' to 0.
+   b. Loop through each character in 'text':
+      i. Check for sentence-ending punctuation marks (., !, ?).
+      ii. If such a punctuation mark is found, increment 'sentences_count' by 1.
+5. Calculate the Coleman-Liau index (CLI):
+   a. Calculate the average number of letters per 100 words (L):
+      i. L = (letters_count / words_count) * 100
+   b. Calculate the average number of sentences per 100 words (S):
+      i. S = (sentences_count / words_count) * 100
+   c. Calculate the CLI using the formula:
+      i. index = 0.0588 * L - 0.296 * S - 15.8
+6. Determine the reading level based on the CLI:
+   a. If the index is greater than 16, print "Grade 16+".
+   b. If the index is less than 1, print "Before Grade 1".
+   c. Otherwise, print "Grade X" where X is the integer value of the index.
