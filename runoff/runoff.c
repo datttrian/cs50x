@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -127,38 +128,38 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-  // TODO
-  // Check if the name is a valid candidate name
-  for (int i = 0; i < candidate_count; i++)
-  {
-    if (strcmp(name, candidates[i].name) == 0)
+    // TODO
+    // Check if the name is a valid candidate name
+    for (int i = 0; i < candidate_count; i++)
     {
-      // Update the preferences array
-      preferences[voter][rank] = 1;
-      return true;
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            // Update the preferences array
+            preferences[voter][rank] = 1;
+            return true;
+        }
     }
-  }
-  return false; // invalid candidate name
+    return false; // invalid candidate name
 }
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-  // TODO
-  for (int i = 0; i < voter_count; i++)
-  {
-    for (int j = 0; j < candidate_count; j++)
+    // TODO
+    for (int i = 0; i < voter_count; i++)
     {
-      int preferred_candidate_index = preferences[i][j];
+        for (int j = 0; j < candidate_count; j++)
+        {
+            int preferred_candidate_index = preferences[i][j];
 
-      // Check if the preferred candidate is eliminated
-      if (!candidates[preferences_candidate_index].eliminated)
-      {
-        candidates[preferred_candidate_index].votes++;
-        break;
-      }
+            // Check if the preferred candidate is eliminated
+            if (!candidates[preferred_candidate_index].eliminated)
+            {
+                candidates[preferred_candidate_index].votes++;
+                break; // Move to the next voter
+            }
+        }
     }
-  }
 }
 
 // Print the winner of the election, if there is one
@@ -174,7 +175,7 @@ bool print_winner(void)
             // Check if the preferred candidate is eliminated
             if (!candidates[preferred_candidate_index].eliminated)
             {
-                candidates[preferred_candidate_index].eliminated
+                candidates[preferred_candidate_index].votes++;
                 break;
             }
         }
