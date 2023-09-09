@@ -57,7 +57,9 @@ int main(int argc, string argv[])
         if (isalpha(plaintext[i]))
         {
             // Determine if it's uppercase or lowercase
-            char base = isupper(plaintext[i]) ? UPPERCASE_LETTERS_START : LOWERCASE_LETTERS_START;
+            char base = isupper(plaintext[i]) ?
+                UPPERCASE_LETTERS_START : // set 'base' to the letter 'A'
+                LOWERCASE_LETTERS_START;
 
             // Shift the letter in the alphabet by the uppercase or lowercase letter start value accordingly
             rotated_char = (rotated_char - base + key) % LETTERS_COUNT + base;
