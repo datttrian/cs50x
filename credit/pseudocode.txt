@@ -14,7 +14,7 @@
 4. Check if the sum of sum_of_evens and sum_of_double_odds is a multiple of 10 (is_valid).
 5. Extract the first two digits of the credit card number.
 6. Check for conditions to identify the credit card company:
-   a. If the first digit is 4, and the number of digits is between 13 and 16, and it's valid, print "VISA."
-   b. If the first two digits are between 51 and 55, and the number of digits is 16, and it's valid, print "MASTERCARD."
-   c. If the first two digits are 34 or 37, and the number of digits is 15, and it's valid, print "AMEX."
-   d. If none of the above conditions are met, print "INVALID."
+   - If the first digit is 4, and the number of digits is between 13 and 16, and it's valid, print "VISA."
+   - If the first two digits are between 51 and 55, and the number of digits is 16, and it's valid, print "MASTERCARD."
+   - If the first two digits are 34 or 37, and the number of digits is 15, and it's valid, print "AMEX."
+   - If none of the above conditions are met, print "INVALID."
