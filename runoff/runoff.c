@@ -129,7 +129,16 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     // Check if the name is a valid candidate name
-    return false;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            // Update the preferences array
+            preferences[voter][rank] = 1;
+            return true;
+        }
+    }
+    return false; // invalid candidate name
 }
 
 // Tabulate votes for non-eliminated candidates
@@ -143,14 +152,36 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < voter_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            int preferred_candidate_index = preferences[i][j];
+
+            // Check if the preferred candidate is eliminated
+            if (!candidates[preferred_candidate_index].eliminated)
+            {
+                candidates[preferred_candidate_index].eliminated
+                break;
+            }
+        }
+    }
 }
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
     // TODO
-    return 0;
+    int min_votes = INT_MAX;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (!candidates[i].eliminated && candidates[i].votes < min_votes)
+        {
+            min_votes = candidate[i].votes;
+        }
+    }
+    return min_votes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
