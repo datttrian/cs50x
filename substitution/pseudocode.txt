@@ -8,7 +8,9 @@
    - Exit with an error code (1).
 6. Create an array of false values to keep track of used characters in the key.
 7. Loop through each character in the key:
-   - Check if the character is alphabetic.
+   - If keyLength is not 26
+      * Print an error message ("Key must contain only alphabetic characters.\n")
+      * Exit with an error code (1).
    - Convert the character to lowercase and calculate its index in the alphabet.
    - Check if the character has already been used in the key.
    - If it has been used, print an error message ("Key must contain each letter exactly once") and exit with an error code (1).

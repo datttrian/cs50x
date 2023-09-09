@@ -42,6 +42,8 @@ int main(int argc, string argv[])
         {
             // Print an error message ("Key must contain only alphabetic characters.\n")
             printf("Key must contain only alphabetic characters.\n");
+
+            // Exit with an error code (1)
             return 1;
         }
 
