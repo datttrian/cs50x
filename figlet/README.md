@@ -72,12 +72,6 @@ Hints
 - Note that the `random` module comes with quite a few functions, per
   [docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html).
 
-## [Demo](#demo)
-
-This demo’s first output used a random font. Your output may vary.
-
-Recorded with [asciinema](https://asciinema.org)
-
 ## [Before You Begin](#before-you-begin)
 
 1.  Log into [cs50.dev](https://cs50.dev/) using your GitHub account.
