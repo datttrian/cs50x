@@ -26,9 +26,6 @@ Hints
 2.  Boolean variables can keep track of whether each criteria in an
     algorithm is valid.
 
-## [Demo](#demo)
-
-![PasswordGif](passwordDemo.gif)
 
 ## [Getting Started](#getting-started)
 
