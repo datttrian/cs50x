@@ -1,14 +1,14 @@
 1. Prompt the user to input a text string and store it in the 'text' variable.
 2. Count the number of letters in the input 'text':
-   - Initialize a counter 'letters_count' to 0.
+   - Initialize a counter 'count' to '0'.
    - Loop through each character in 'text':
-      * If it's alphabetic, increment 'letters_count' by 1.
+      * If it's alphabetic, increment 'count' by '1'.
       * Else, do nothing
 3. Count the number of words in the 'text':
-   a. Initialize a counter 'words_count' to 1 (assuming the last word doesn't end with a space).
-   b. Loop through each character in 'text':
-      i. Check if the character is a whitespace character (using 'isspace' function).
-      ii. If it's a whitespace character, increment 'words_count' by 1.
+   - Initialize a counter 'count' to '0'.
+   - Loop through each character in 'text':
+      i. Check if the character is a whitespace character.
+      ii. If it's a whitespace character, increment 'count' by 1.
 4. Count the number of sentences in the 'text':
    a. Initialize a counter 'sentences_count' to 0.
    b. Loop through each character in 'text':
