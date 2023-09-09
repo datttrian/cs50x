@@ -64,6 +64,8 @@ int main(int argc, string argv[])
             // Update the rotated character using the Caesar cipher algorithm
             rotated_char = (rotated_char - base + key) % LETTERS_COUNT + base;
         }
+
+        // Print the ciphertext
         printf("%c", rotated_char);
     }
     printf("\n");
