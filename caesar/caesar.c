@@ -21,34 +21,37 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Make sure every character in argv[1] is a digit
-
     // Store the second command-line argument as a string
     string key_str = argv[1];
 
     // Loop through each character in the argument:
     for (int i = 0; i < strlen(key_str); i++)
     {
-        // If it's not a digit, print an error message ("Usage: program_name key") and exit with an error code (1).
+        // If it's not a digit
         if (!isdigit(key_str[i]))
         {
+            // Print an error message ("Usage: program_name key")
             printf("Usage: ./caesar key\n");
+
+            // Exit with an error code 1
             return 1;
         }
     }
 
-    // Convert argv[1] from a `string` to an `int`
+    // Convert the string argument to integer
     int key = atoi(key_str);
 
-    // Prompt the user for plaintext
+    // Prompt the user to enter plaintext
     string plaintext = get_string("plaintext: ");
 
-    // Encrypt and print ciphertext.
+    // Display "ciphertext: "
     printf("ciphertext: ");
     for (int i = 0; plaintext[i] != '\0'; i++)
     {
-        // Rotate the character if it's a letter
+        // Initialize variables rotated_char to store the inputted plaintext
         char rotated_char = plaintext[i];
+
+        // Loop through each character in the plaintext,
         if (isalpha(plaintext[i]))
         {
             char base = isupper(plaintext[i]) ? UPPERCASE_LETTERS_START : LOWERCASE_LETTERS_START;
