@@ -11,10 +11,10 @@
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).
    - Calculate the character position in the alphabet and store it to an integer index.
-   - If the element in the used array at the specified index is true
+   - If the element in the used array at the specified index is true:
       * Print an error message ("Key must contain each letter exactly once").
       * Exit with an error code (1).
-   - Mark the element in the used array at the specified index as true
+   - Mark the element in the used array at the specified index as true.
 8. Display "plaintext: " to prompt the user input a string and store it in plaintext.
 9. Initialize an empty string (ciphertext) to store the encrypted text.
 10. Loop through each character in the plaintext:

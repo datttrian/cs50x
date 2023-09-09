@@ -53,13 +53,17 @@ int main(int argc, string argv[])
         // Calculate the character position in the alphabet and store it to an integer index
         int index = tolower(key[i]) - UPPERCASE_LETTERS_START;
 
-        // Check if the character has already been used in the key
+        // If the element in the used array at the specified index is true
         if (used[index])
         {
+            // Print an error message ("Key must contain each letter exactly once")
             printf("Key must contain each letter exactly once.\n");
+
+            // Exit with an error code (1)
             return 1;
         }
 
+        // Mark the element in the used array at the specified index as true
         used[index] = true;
     }
 
