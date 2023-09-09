@@ -1,6 +1,5 @@
 # TODO
 from cs50 import get_int
-from math import floor
 
 
 def main():
