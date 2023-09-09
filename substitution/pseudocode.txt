@@ -16,7 +16,7 @@
    - If the array used is true at the integer index
       * Print an error message ("Key must contain each letter exactly once").
       * Exit with an error code (1).
-   - Mark the character as used in the used array.
+   - Mark the array used as true at the integer index
 
 7. Loop through each character in the key:
    a. Check if the character is alphabetic.
