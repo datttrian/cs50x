@@ -1,4 +1,4 @@
-1. Ask the user to input a credit card number as a long long integer.
+1. Display "Number: " to prompt the user input a long long integer.
 2. Initialize variables:
    - digit1 and digit2 for tracking the current and previous digits.
    - num_digits to count the number of digits processed.
