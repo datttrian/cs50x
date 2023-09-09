@@ -12,8 +12,7 @@
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).
    - Convert the character to lowercase and calculate its index in the alphabet.
-   - Check if the character has already been used in the key.
-   - If keyLength is not 26
+   - If the index of array used is true
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).
    - If it has been used, print an error message ("Key must contain each letter exactly once") and exit with an error code (1).
