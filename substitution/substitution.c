@@ -24,10 +24,13 @@ int main(int argc, string argv[])
     string key = argv[1];
     int keyLength = strlen(key);
 
-    // Check if the key has exactly 26 characters
+    // If keyLength is not 26
     if (keyLength != LETTERS_COUNT)
     {
+        // Print an error message ("Key must contain 26 characters")
         printf("Key must contain %d characters.\n", LETTERS_COUNT);
+
+        // Exit with an error code (1)
         return 1;
     }
 
@@ -78,7 +81,10 @@ int main(int argc, string argv[])
             int index = isupper(c) ? c - UPPERCASE_LETTERS_START : c - LOWERCASE_LETTERS_START;
 
             // Replace the character with the corresponding character from the key while maintaining the case
-            printf("%c", isupper(c) ? toupper(key[index]) : tolower(key[index]));
+            char replacementChar = isupper(c) ? toupper(key[index]) : tolower(key[index]);
+
+            // Print the character
+            printf("%c", replacementChar);
         }
         else
         {
