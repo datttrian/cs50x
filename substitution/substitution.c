@@ -20,9 +20,11 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Check if the key has exactly 26 characters
+
     string key = argv[1];
     int keyLength = strlen(key);
+
+    // Check if the key has exactly 26 characters
     if (keyLength != LETTERS_COUNT)
     {
         printf("Key must contain %d characters.\n", LETTERS_COUNT);
