@@ -6,6 +6,7 @@
 5. Convert the string argument to an integer.
 6. Prompt the user to enter plaintext.
 7. Display "ciphertext: "
+8. Initialize variables rotated_char to store the inputted plaintext
 9. Loop through each character in the plaintext:
    - If the character is a letter:
       * Determine if it's uppercase or lowercase.
