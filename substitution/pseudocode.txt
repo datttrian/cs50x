@@ -13,7 +13,7 @@
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).
    - Calculate the character position in the alphabet and store it to an integer index.
-   - If the index of array used is true
+   - If the array used is true at the integer index
       * Print an error message ("Key must contain only alphabetic characters.\n")
       * Exit with an error code (1).
    - If it has been used, print an error message ("Key must contain each letter exactly once") and exit with an error code (1).
