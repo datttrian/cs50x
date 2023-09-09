@@ -8,19 +8,18 @@
 4. Create an array used of false values to keep track of used characters in the key.
 5. Loop through each character in the key:
    - If the character is not alphabetic
-      * Print an error message ("Key must contain only alphabetic characters.\n")
+      * Print an error message ("Key must contain only alphabetic characters.\n").
       * Exit with an error code (1).
    - Calculate the character position in the alphabet and store it to an integer index.
    - If the element in the used array at the specified index is true:
       * Print an error message ("Key must contain each letter exactly once").
       * Exit with an error code (1).
    - Mark the element in the used array at the specified index as true.
-6. Display "ciphertext: "
-7. Display "plaintext: " to prompt the user input a string and store it in plaintext
+6. Display "plaintext: " to prompt the user input a string and store it in plaintext.
+7. Display "ciphertext: ".
 8. Loop through each character in the plaintext:
     - If the character is alphabetic:
        * Calculate its index in the alphabet.
        * Replace the character with the corresponding character from the key while maintaining the case.
        * Print the character.
-    - If the character is not alphabetic:
-       * Print the character unchanged.
+    - Else, print the character unchanged.
