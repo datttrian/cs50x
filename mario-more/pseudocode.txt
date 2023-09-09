@@ -1,11 +1,10 @@
-1. Define a function named 'repeat' that takes a character 'c' and an integer 'times':
-   - While 'times' is greater than or equal to 0, display the character 'c' and decrement 'times' by 1
-2. Repeat the following steps until n is between 1 and 8 (inclusive):
-   - Display "Positive Number: " to the user
-   - Input a positive integer and store it in n
-3. For i from 1 to n (inclusive), do the following:
-   - Call the 'repeat' function with parameters (' ', 'n - i') to print spaces before the hashes
-   - Call the 'repeat' function with parameters ('#', 'i') to print the hashes
-   - Display two spaces
-   - Call the 'repeat' function with parameters ('#', 'i') to print the second set of hashes
-   - Move to the next line
+1. Ask the user to input a positive integer 'n' (the height of the pyramid).
+
+If the input 'n' is not between 1 and 8 (inclusive), go back to step 2 and ask for 'n' again until a valid input is received.
+
+For each row from 1 to 'n':
+a. Print spaces equal to 'n - row_number'.
+b. Print hash symbols ('#') equal to 'row_number' for the left half of the pyramid.
+c. Print two spaces (" ").
+d. Print hash symbols ('#') equal to 'row_number' for the right half of the pyramid.
+e. Move to the next line for the next row.
