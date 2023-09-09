@@ -13,7 +13,10 @@ int main(int argc, string argv[])
     // Check if the program was called with 2 command-line arguments
     if (argc != 2)
     {
+        // Print an error message ("Usage: program_name key")
         printf("Usage: %s key\n", argv[0]);
+
+        // Exit with an error code (1)
         return 1;
     }
 
