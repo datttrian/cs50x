@@ -20,7 +20,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
+    // Store the second command-line argument and its length as a string and an integer
     string key = argv[1];
     int keyLength = strlen(key);
 
