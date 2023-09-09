@@ -13,13 +13,13 @@ int main(void)
     // Outer loop for rows
     for (int i = 1; i <= n; i++)
     {
-        // Inner loop for dots
+        // Inner loop for n - i spaces before the hashes
         for (int j = 1; j <= n - i; j++)
         {
             printf(" ");
         }
 
-        // Inner loop for hashes
+        // Inner loop for i hashes
         for (int k = 1; k <= i; k++)
         {
             printf("#");
