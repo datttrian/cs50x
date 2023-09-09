@@ -6,16 +6,16 @@ def main():
     # Display "Height: " to prompt the user input a positive integer between 1 and 8 and store it in n
     while True:
         n = get_int("Height: ")
-        if n >= 1 and n <= 8:
+        if 1 <= n <= 8:
             break
 
     # For each row from '1' to 'n'
     for row in range(1, n + 1):
-        # Print 'n - row' spaces
-        print(" " * (n - row), end="")
+        spaces = " " * (n - row)
+        left_hashes = "#" * row
 
-        # Print 'row' hash symbols ('#') for the pyramid
-        print("#" * row)
+        # Print 'n - row' spaces and 'row' hash symbols
+        print(f"{spaces}{left_hashes}")
 
 
 if __name__ == "__main__":
