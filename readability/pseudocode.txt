@@ -2,9 +2,19 @@
 2. Function count_letters(text):
    - Initialize a counter 'count' to 0.
    - For each character 'char' in 'text':
-      - If 'char' is alphabetic:
-         - Increment 'count' by 1.
+      * If it's alphabetic, increment 'count' by '1'.
    - Return 'count'.
+2. Function count_words(text):
+   - Initialize a counter 'count' to 1.
+   - For each character 'char' in 'text':
+      * If it's alphabetic, increment 'count' by '1'.
+   - Return 'count'.
+2. Function count_letters(text):
+   - Initialize a counter 'count' to 0.
+   - For each character 'char' in 'text':
+      * If it's alphabetic, increment 'count' by '1'.
+   - Return 'count'.
+
 2. Write a function to count the number of words in a text:
    - Initialize a counter 'count' to '1' to account for the first word.
    - Loop through each character in 'text':
