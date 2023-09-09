@@ -3,8 +3,12 @@
 
 int main()
 {
-    // Display "Number: " to prompt the user input a long long integer between 1 and 8 and store it in n
-    long long cc_number = get_long_long("Number: ");
+    // Display "Number: " to prompt the user input a long integer between 1 and 8 and store it in n
+    do
+    {
+        card_number = get_long("Number: ");
+    }
+    while (card_number < 0);
 
     // Initialize variables for various calculations and tracking digits and sums
     int digit1 = 0, digit2 = 0, num_digits = 0, sum_of_double_odds = 0, sum_of_evens = 0;
