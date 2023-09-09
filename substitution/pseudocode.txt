@@ -1,0 +1,15 @@
+1. Check if the program was called with 2 command-line arguments.
+2. If the argument count is not 2, print an error message ("Usage: program_name key") and exit with an error code (1).
+3. Store the second command-line argument as a string.
+4. Loop through each character in the argument string:
+   - If it's not a digit, print an error message ("Usage: program_name key") and exit with an error code (1).
+5. Convert the string argument to integer.
+6. Display "plaintext: " to prompt the user input a string and store it in plaintext.
+7. Display "ciphertext: ".
+8. Loop through each character in the plaintext:
+   - Initialize variables rotated_char to store the character
+   - If the character is a letter:
+      * Determine the base character based on the case of it.
+      * Update the rotated character using the Caesar cipher algorithm.
+   - Else, do nothing.
+9. Print the ciphertext.
