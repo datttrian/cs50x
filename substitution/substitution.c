@@ -67,11 +67,11 @@ int main(int argc, string argv[])
         used[index] = true;
     }
 
-    // Display "ciphertext: "
-    printf("ciphertext: ");
-
     // Display "plaintext: " to prompt the user input a string and store it in plaintext
     string plaintext = get_string("plaintext: ");
+
+    // Display "ciphertext: "
+    printf("ciphertext: ");
 
     // Loop through each character in the plaintext
     for (int i = 0, n = strlen(plaintext); i < n; i++)
