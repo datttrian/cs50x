@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Define macros for uppercase letters start, lowercase letters start, and total letter count.
 #define UPPERCASE_LETTERS_START 'A'
 #define LOWERCASE_LETTERS_START 'a'
 #define LETTERS_COUNT 26
