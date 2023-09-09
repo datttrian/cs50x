@@ -5,15 +5,15 @@
       * If it's alphabetic, increment 'count' by '1'.
       * Else, do nothing
 3. Count the number of words in the 'text':
+   - Initialize a counter 'count' to '1' to account for the first word.
+   - Loop through each character in 'text':
+      * If it's a whitespace, increment 'count' by '1'.
+      * Else, do nothing
+4. Count the number of sentences in the 'text':
    - Initialize a counter 'count' to '0'.
    - Loop through each character in 'text':
-      i. Check if the character is a whitespace character.
-      ii. If it's a whitespace character, increment 'count' by 1.
-4. Count the number of sentences in the 'text':
-   a. Initialize a counter 'sentences_count' to 0.
-   b. Loop through each character in 'text':
-      i. Check for sentence-ending punctuation marks (., !, ?).
-      ii. If such a punctuation mark is found, increment 'sentences_count' by 1.
+      * If it's a punctuation (., !, ?), increment 'count' by '1'.
+      * Else, do nothing
 5. Calculate the Coleman-Liau index (CLI):
    a. Calculate the average number of letters per 100 words (L):
       i. L = (letters_count / words_count) * 100
