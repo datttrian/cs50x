@@ -1,27 +1,26 @@
 1. Prompt the user to input a text string and store it in the 'text' variable.
-2. Count the number of letters in the input 'text':
-   - Initialize a counter 'count' to '0'.
-   - Loop through each character in 'text':
-      * If it's alphabetic, increment 'count' by '1'.
-      * Else, do nothing
-3. Count the number of words in the 'text':
+2. Function count_letters(text):
+   - Initialize a counter 'count' to 0.
+   - For each character 'char' in 'text':
+      - If 'char' is alphabetic:
+         - Increment 'count' by 1.
+   - Return 'count'.
+2. Write a function to count the number of words in a text:
    - Initialize a counter 'count' to '1' to account for the first word.
    - Loop through each character in 'text':
       * If it's a whitespace, increment 'count' by '1'.
       * Else, do nothing
-4. Count the number of sentences in the 'text':
+3. Write a function to count the number of sentences in a text:
    - Initialize a counter 'count' to '0'.
    - Loop through each character in 'text':
       * If it's a punctuation (., !, ?), increment 'count' by '1'.
       * Else, do nothing
+4. Count the number of letters, words, and sentences in the input text using 3 previous functions
 5. Calculate the Coleman-Liau index (CLI):
-   a. Calculate the average number of letters per 100 words (L):
-      i. L = (letters_count / words_count) * 100
-   b. Calculate the average number of sentences per 100 words (S):
-      i. S = (sentences_count / words_count) * 100
-   c. Calculate the CLI using the formula:
-      i. index = 0.0588 * L - 0.296 * S - 15.8
+   - Calculate the average number of letters per 100 words (L):
+   - Calculate the average number of sentences per 100 words (S):
+   - Calculate the index using the formula: index = 0.0588 * L - 0.296 * S - 15.8
 6. Determine the reading level based on the CLI:
-   a. If the index is greater than 16, print "Grade 16+".
-   b. If the index is less than 1, print "Before Grade 1".
-   c. Otherwise, print "Grade X" where X is the integer value of the index.
+   - If the index is greater than 16, print "Grade 16+\n".
+   - If the index is less than 1, print "Before Grade 1\n".
+   - Otherwise, print "Grade X\n" where X is the integer value of the index.

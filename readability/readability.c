@@ -11,7 +11,7 @@ int count_sentences(string text);
 
 int main(void)
 {
-    // Prompt the user for input and store it in the 'text' variable
+    // Prompt the user to input a text and store it in the 'text' variable
     string text = get_string("Text: ");
 
     // Count the number of letters, words, and sentences in the input text
