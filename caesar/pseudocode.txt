@@ -11,5 +11,5 @@
    - If the character is a letter:
       * Determine the base character based on the case of it.
       * Update the rotated character using the Caesar cipher algorithm.
-   - Else, (the character is not a letter) do nothing.
+   - Else, do nothing.
 9. Print the ciphertext.
