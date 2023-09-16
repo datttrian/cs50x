@@ -14,13 +14,13 @@
 
 - Lab: [Scrabble](/scrabble)
 - Practice Problem: [Hours](/hours), [N0 V0w3ls](/no-vowels), [Password](/password)
-- Problem Set: [Readability](/readability), [Bulbs](/bulbs), [Caesar](/caesar), [Substitution](/substitution), Wordle50
+- Problem Set: [Readability](/readability), [Bulbs](/bulbs), [Caesar](/caesar), [Substitution](/substitution), [Wordle50](/wordle)
 
 ## Week 3 Algorithms
 
 - Lab: [Sort](/sort)
 - Practice Problem: [Recursive atoi](/atoi), [Average High Temperatures](/temps), [Max](/max), [Snackbar](/snackbar)
-- Problem Set: [Plurality](/plurality), [Runoff](/runoff), Tideman
+- Problem Set: [Plurality](/plurality), [Runoff](/runoff), [Tideman](/tideman)
 
 ## Week 4 Memory
 
