@@ -44,7 +44,7 @@
 
 - Lab: [Songs](/songs)
 - Practice Problem: [Favorites](/favorites), [Hall of Prophecy](/prophecy)
-- Problem Set: [Movies](), [Fiftyville]()
+- Problem Set: [Movies](/movies), [Fiftyville]()
 
 ## Week 8 HTML, CSS, JavaScript
 
