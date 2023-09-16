@@ -14,8 +14,7 @@ typedef struct
     string name;
     int votes;
     bool eliminated;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -175,26 +174,26 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-  // TODO
-  // Calculate the number of votes required for a majority
-  int majority_votes = voter_count / 2 + 1;
+    // TODO
+    // Calculate the number of votes required for a majority
+    int majority_votes = voter_count / 2 + 1;
 
-  // Iterate through each candidate
-  for (int i = 0; i < candidate_count; i++)
-  {
-    // Check if a candidate has received more votes than the majority
-    if (candidates[i].votes >= majority_votes)
+    // Iterate through each candidate
+    for (int i = 0; i < candidate_count; i++)
     {
-      // Print the name of the winning candidate
-      printf("%s\n", candidates[i].name);
+        // Check if a candidate has received more votes than the majority
+        if (candidates[i].votes >= majority_votes)
+        {
+            // Print the name of the winning candidate
+            printf("%s\n", candidates[i].name);
 
-      // Indicate that a winner has been found
-      return true;
+            // Indicate that a winner has been found
+            return true;
+        }
     }
-  }
 
-  // Indicate no candidate has a majority of votes
-  return false;
+    // Indicate no candidate has a majority of votes
+    return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
@@ -237,5 +236,14 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    return;
+    // Iterate through each candidate
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // Check if the candidate has the same number of votes as the minimum
+        if (candidates[i].votes == min)
+        {
+            // Mark the candidate as eliminated
+            candidates[i].eliminated = true;
+        }
+    }
 }
