@@ -54,7 +54,7 @@
 
 ## Week 9 Flask
 
-- Lab: [Birthdays]()
+- Lab: [Birthdays](/birthdays)
 - Practice Problem: [Hello, Flask]()
 - Problem Set: Finance
 
