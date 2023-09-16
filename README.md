@@ -42,7 +42,7 @@
 
 ## Week 7 SQL
 
-- Lab: [Songs]()
+- Lab: [Songs](/songs)
 - Practice Problem: [Favorites](), [Hall of Prophecy]()
 - Problem Set: [Movies](), [Fiftyville]()
 
