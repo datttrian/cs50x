@@ -26,7 +26,7 @@
 
 - Lab: [Smiley](/smiley), [Volume](/volume)
 - Practice Problem: [Bottom Up](/bottomup), [License](/license)
-- Problem Set: [Filter Less](/filter-less), [Filter More](/filter-more), [Recover](/recover), [Reverse](/reverse)
+- Problem Set: [Filter Less](/filter-less), [Filter More](/filter-more), [Recover](/recover), [Reverse]()
 
 ## Week 5 Data Structures
 
