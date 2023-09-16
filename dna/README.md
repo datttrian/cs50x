@@ -173,7 +173,7 @@ sequence of DNA belongs.
 
 ## [Walkthrough](#walkthrough)
 
-[CS50 Video Player]()
+[CS50 Video Player](https://www.youtube.com/watch?v=j84b_EgntcQ)
 
 ## [Usage](#usage)
 
