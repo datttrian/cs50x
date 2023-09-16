@@ -175,8 +175,26 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
-    return false;
+  // TODO
+  // Calculate the number of votes required for a majority
+  int majority_votes = voter_count / 2 + 1;
+
+  // Iterate through each candidate
+  for (int i = 0; i < candidate_count; i++)
+  {
+    // Check if a candidate has received more votes than the majority
+    if (candidates[i].votes >= majority_votes)
+    {
+      // Print the name of the winning candidate
+      printf("%s\n", candidates[i].name);
+
+      // Indicate that a winner has been found
+      return true;
+    }
+  }
+
+  // Indicate no candidate has a majority of votes
+  return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
