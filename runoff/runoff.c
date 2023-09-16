@@ -128,6 +128,21 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // Check if the name is a valid candidate name
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // Compare the provided name with the name of each candidate
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            // Set the preference rank of the current voter to the candidate's index (i)
+            preferences[voter][rank] = i;
+
+            // Indicate a successful vote
+            return true;
+        }
+    }
+
+    // Indicate an invalid candidate name
     return false;
 }
 
