@@ -31,7 +31,7 @@
 ## Week 5 Data Structures
 
 - Lab: [Inheritance](inheritance)
-- Practice Problem: [Trie]()
+- Practice Problem: [Trie](/trie)
 - Problem Set: Speller
 
 ## Week 6 Python
@@ -55,7 +55,7 @@
 ## Week 9 Flask
 
 - Lab: [Birthdays](/birthdays)
-- Practice Problem: [Hello, Flask]()
+- Practice Problem: [Hello, Flask](/helloflask)
 - Problem Set: Finance
 
 ## Week 10 Emoji
