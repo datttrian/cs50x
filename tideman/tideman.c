@@ -100,19 +100,6 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
-    // Loop through the candidates to find a match for the given name
-    for (int i = 0; i < candidate_count; i++)
-    {
-        // Compare the candidate name with the given name
-        if (strcmp(candidates[i], name) == 0)
-        {
-            // If a match is found, update the ranks array with the candidate's index as the rank preference
-            ranks[rank] = i;
-            // Return true to indicate a successful vote recording
-            return true;
-        }
-    }
-    // If no match is found, return false to indicate an invalid vote
     return false;
 }
 
@@ -120,70 +107,21 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // TODO
-    // Iterate through the ranks of the current voter
-    for (int i = 0; i < candidate_count; i++)
-    {
-        // Compare each pair of candidates in the voter's ranks
-        for (int j = i + 1; j < candidate_count; j++)
-        {
-            // Increase the preference count for the candidate at ranks[i] over ranks[j]
-            preferences[ranks[i]][ranks[j]]++;
-        }
-    }
+    return;
 }
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
     // TODO
-    // Iterate through pairs of candidates
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = i + 1; j < candidate_count; j++)
-        {
-            // Check if preferences indicate candidate i is preferred over candidate j
-            if (preferences[i][j] > preferences[j][i])
-            {
-                // Record this pair with i as the winner and j as the loser
-                pairs[pair_count].winner = i;
-                pairs[pair_count].loser = j;
-                // Increment the pair_count
-                pair_count++;
-            }
-            // Check if preferences indicate candidate j is preferred over candidate i
-            else if (preferences[i][j] < preferences[j][i])
-            {
-                // Record this pair with j as the winner and i as the loser
-                pairs[pair_count].winner = j;
-                pairs[pair_count].loser = i;
-                // Increment the pair_count
-                pair_count++;
-            }
-        }
-    }
+    return;
 }
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
     // TODO
-    // Bubble sort algorithm to sort pairs based on the strength of victory
-    for (int i = 0; i < pair_count - 1; i++)
-    {
-        for (int j = 0; j < pair_count - i - 1; j++)
-        {
-            int margin1 = preferences[pairs[j].winner][pairs[j].loser];
-            int margin2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
-
-            // Swap pairs if margin1 is less than margin2, ensuring descending order
-            if (margin1 < margin2)
-            {
-                pair temp = pairs[j];
-                pairs[j] = pairs[j + 1];
-                pairs[j + 1] = temp;
-            }
-        }
-    }
+    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
