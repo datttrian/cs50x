@@ -25,7 +25,7 @@
 ## Week 4 Memory
 
 - Lab: [Smiley](/smiley), [Volume](/volume)
-- Practice Problem: [Bottom Up](), [License]()
+- Practice Problem: [Bottom Up](/bottomup), [License]()
 - Problem Set: [Filter Less](), [Filter More](), [Recover](), [Reverse]()
 
 ## Week 5 Data Structures
