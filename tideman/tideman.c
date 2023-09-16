@@ -15,7 +15,8 @@ typedef struct
 {
     int winner;
     int loser;
-} pair;
+}
+pair;
 
 // Array of candidates
 string candidates[MAX];
@@ -99,9 +100,6 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
-    // Check if the name is a valid candidate
-    // If valid, update the ranks array with the candidate's index as the rank preference
-    // Return true if the vote was recorded successfully, false otherwise
     return false;
 }
 
