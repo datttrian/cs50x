@@ -133,14 +133,49 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    return;
+    // Iterate through all pairs of candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            // Determine if one candidate is preferred over the other and add to pairs
+            if (preferences[i][j] > preferences[j][i])
+            {
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
+                pair_count++;
+            }
+            else if (preferences[j][i] > preferences[i][j])
+            {
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count++;
+            }
+        }
+    }
 }
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
     // TODO
-    return;
+    // Bubble sort the pairs based on the strength of victory
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        for (int j = 0; j < pair_count - i - 1; j++)
+        {
+            int margin1 = preferences[pairs[j].winner][pairs[j].loser];
+            int margin2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
+
+            // Swap pairs if the margin of victory is greater
+            if (margin1 < margin2)
+            {
+                pair temp = pairs[j];
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = temp;
+            }
+        }
+    }
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
