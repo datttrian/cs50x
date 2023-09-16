@@ -34,12 +34,47 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-    ...
+    new_cases = {}
+    previous_cases = {}
+
+    for row in reader:
+        state = row["state"]
+        cases = int(row["cases"])
+
+        if state not in new_cases:
+            new_cases[state] = []
+            previous_cases[state] = 0
+
+        # Calculate new cases for the current day
+        new_day_cases = cases - previous_cases[state]
+        new_cases[state].append(new_day_cases)
+
+        # Keep only the last 14 days of new cases
+        if len(new_cases[state]) > 14:
+            new_cases[state].pop(0)
+
+        # Update the previous cases for the next iteration
+        previous_cases[state] = cases
+
+    return new_cases
 
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
-    ...
+    for state in states:
+        try:
+            # Calculate this week's average
+            this_week_avg = sum(new_cases[state][-7:]) / 7
+            # Calculate last week's average
+            last_week_avg = sum(new_cases[state][-14:-7]) / 7
+            # Calculate the percent change
+            percent_change = ((this_week_avg - last_week_avg) / last_week_avg) * 100
+
+            print(
+                f"{state} had a 7-day average of {int(this_week_avg)} and a change of {int(percent_change)}%."
+            )
+        except ZeroDivisionError:
+            print(f"{state} data is insufficient to calculate the 7-day average.")
 
 
 main()
