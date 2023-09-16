@@ -24,7 +24,7 @@
 
 ## Week 4 Memory
 
-- Lab: Smiley, Volume
+- Lab: [Smiley](/smiley), Volume
 - Practice Problem: Bottom Up, License
 - Problem Set: Filter Less, Filter More, Recover, Reverse
 
