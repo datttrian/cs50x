@@ -31,7 +31,7 @@
 ## Week 5 Data Structures
 
 - Lab: [Inheritance](inheritance)
-- Practice Problem: [Trie](trie)
+- Practice Problem: [Trie]()
 - Problem Set: Speller
 
 ## Week 6 Python
