@@ -24,7 +24,7 @@
 
 ## Week 4 Memory
 
-- Lab: [Smiley](/smiley), [Volume]()
+- Lab: [Smiley](/smiley), [Volume](/volume)
 - Practice Problem: [Bottom Up](), [License]()
 - Problem Set: [Filter Less](), [Filter More](), [Recover](), [Reverse]()
 
