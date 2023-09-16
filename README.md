@@ -24,14 +24,14 @@
 
 ## Week 4 Memory
 
-- Lab: [Smiley](/smiley), Volume
-- Practice Problem: Bottom Up, License
-- Problem Set: Filter Less, Filter More, Recover, Reverse
+- Lab: [Smiley](/smiley), [Volume]()
+- Practice Problem: [Bottom Up](), [License]()
+- Problem Set: [Filter Less](), [Filter More](), [Recover](), [Reverse]()
 
 ## Week 5 Data Structures
 
-- Lab: Inheritance
-- Practice Problem: Trie
+- Lab: [Inheritance](inheritance)
+- Practice Problem: [Trie](trie)
 - Problem Set: Speller
 
 ## Week 6 Python
@@ -42,20 +42,20 @@
 
 ## Week 7 SQL
 
-- Lab: Songs
-- Practice Problem: Favorites, Hall of Prophecy
-- Problem Set: Movies, Fiftyville
+- Lab: [Songs]()
+- Practice Problem: [Favorites](), [Hall of Prophecy]()
+- Problem Set: [Movies](), [Fiftyville]()
 
 ## Week 8 HTML, CSS, JavaScript
 
-- Lab: Trivia
-- Practice Problem: Radio Shack Redo
+- Lab: [Trivia]()
+- Practice Problem: [Radio Shack Redo]()
 - Problem Set: Homepage
 
 ## Week 9 Flask
 
-- Lab: Birthdays
-- Practice Problem: Hello, Flask
+- Lab: [Birthdays]()
+- Practice Problem: [Hello, Flask]()
 - Problem Set: Finance
 
 ## Week 10 Emoji
