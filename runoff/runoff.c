@@ -150,6 +150,14 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    // Iterate through each rank of preference for the current voter
+    for (int j = 0; j < candidate_countl j++)
+    {
+        // Get the index of the preferred candidate for this rank
+        int preferred_candidate_index = preferences[i][j];
+
+        // Check if the pr
+    }
     return;
 }
 
