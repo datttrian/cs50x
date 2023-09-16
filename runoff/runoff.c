@@ -150,15 +150,26 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    // Iterate through each rank of preference for the current voter
-    for (int j = 0; j < candidate_countl j++)
+    // Iterate through each voter's preferences
+    for (int i = 0; i < voter_count; i++)
     {
-        // Get the index of the preferred candidate for this rank
-        int preferred_candidate_index = preferences[i][j];
+        // Iterate through each rank of preference for the current voter
+        for (int j = 0; j < candidate_count; j++)
+        {
+            // Get the index of the preferred candidate for this rank
+            int preferred_candidate_index = preferences[i][j];
 
-        // Check if the pr
+            // Check if the preferred candidate is eliminated
+            if (!candidates[preferred_candidate_index].eliminated)
+            {
+                // If the preferred candidate is not eliminated, increment their vote count
+                candidates[preferred_candidate_index].votes++;
+
+                // Move to the next voter
+                break;
+            }
+        }
     }
-    return;
 }
 
 // Print the winner of the election, if there is one
