@@ -43,7 +43,7 @@
 ## Week 7 SQL
 
 - Lab: [Songs](/songs)
-- Practice Problem: [Favorites](), [Hall of Prophecy]()
+- Practice Problem: [Favorites](/favorites), [Hall of Prophecy]()
 - Problem Set: [Movies](), [Fiftyville]()
 
 ## Week 8 HTML, CSS, JavaScript
