@@ -36,21 +36,37 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # return apology("TODO")
-    owned = db.execute(
-        "SELECT stock,number FROM owned WHERE user_id = ?", session["user_id"]
-    )
+    # Query the database to get a list of owned stocks and their quantities for the current user
+    owned = db.execute("SELECT stock, number FROM owned WHERE user_id = ?", session["user_id"])
+    
+    # Initialize a variable to keep track of the total portfolio value
     total = 0
+    
+    # Iterate through the user's owned stocks
     for stock in owned:
+        # Look up the current stock's price and update the stock dictionary
         stock["price"] = lookup(stock["stock"])["price"]
+        
+        # Calculate the value of the user's holdings for this stock
         stock["value"] = stock["price"] * stock["number"]
+        
+        # Update the total portfolio value with the value of this stock
         total += stock["value"]
-        stock["value"] = usd(stock["price"] * stock["number"])
+        
+        # Format the value of this stock as USD
+        stock["value"] = usd(stock["value"])
+    
+    # Query the database to get the user's cash balance
     cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])
+    
+    # Add the cash balance to the total portfolio value
     total += cash[0]["cash"]
+    
+    # Format the total portfolio value as USD
     total = usd(total)
-    return render_template(
-        "index.html", owned=owned, cash=usd(cash[0]["cash"]), total=total
-    )
+    
+    # Render the index.html template with the user's portfolio data
+    return render_template("index.html", owned=owned, cash=usd(cash[0]["cash"]), total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -177,17 +193,20 @@ def logout():
 def quote():
     """Get stock quote."""
     # return apology("TODO")
+    # Check if the request method is POST (data submission)
     if request.method == "POST":
+        # Check if the "symbol" field is empty
         if not request.form.get("symbol"):
-            return apology("must provide a stock symbol", 400)
+            return apology("must provide a stock symbol", 400)  # return an error if symbol is missing
+        # Look up the stock symbol in the database
         if lookup(request.form.get("symbol")):
             stock = lookup(request.form.get("symbol"))
-            stock["price"] = usd(stock["price"])
-            return render_template("quoted.html", stock=stock)
+            stock["price"] = usd(stock["price"])  # format the stock price as USD
+            return render_template("quoted.html", stock=stock)  # render the quoted.html template with stock data
         else:
-            return apology("No such stock symbol", 400)
+            return apology("No such stock symbol", 400)  # return an error if the symbol is not found
     else:
-        return render_template("quote.html")
+        return render_template("quote.html")  # render the quote.html template for the initial GET request
 
 
 @app.route("/register", methods=["GET", "POST"])
