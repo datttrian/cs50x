@@ -57,8 +57,6 @@ def size(self):
 You’re welcome, but not required, to implement a `main` function in
 which to test your class, so this is all we can demo!
 
-Source: Sesame Street
-
 ## [Before You Begin](#before-you-begin)
 
 1.  Log into [cs50.dev](https://cs50.dev/) using your GitHub account.
