@@ -3,7 +3,7 @@ from cs50 import get_int
 
 
 def main():
-    # Display "Height: " to prompt the user input a positive integer between 1 and 8 and store it in n
+    # Display "Height: " to prompt the user to input a positive integer between 1 and 8 and store it in n
     while True:
         n = get_int("Height: ")
         if 1 <= n <= 8:

@@ -3,7 +3,7 @@
 
 int main()
 {
-    // Display "Number: " to prompt the user input a positive long number and store it in cc_number
+    // Display "Number: " to prompt the user to input a positive long number and store it in cc_number
     long cc_number;
     do
     {

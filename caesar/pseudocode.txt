@@ -7,7 +7,7 @@
       * print an error message ("Usage: program_name key").
       * exit with an error code (1).
 4. Convert the string argument to integer.
-5. Display "plaintext: " to prompt the user input a string and store it in plaintext.
+5. Display "plaintext: " to prompt the user to input a string and store it in plaintext.
 6. Display "ciphertext: ".
 7. Loop through each character in the plaintext:
    - Initialize variables rotated_char to store the character

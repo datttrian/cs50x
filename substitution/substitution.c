@@ -67,7 +67,7 @@ int main(int argc, string argv[])
         used[index] = true;
     }
 
-    // Display "plaintext: " to prompt the user input a string and store it in plaintext
+    // Display "plaintext: " to prompt the user to input a string and store it in plaintext
     string plaintext = get_string("plaintext: ");
 
     // Display "ciphertext: "

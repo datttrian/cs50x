@@ -162,7 +162,7 @@ verbal overview of what to do too!
 
 ### [Hints](#hints)
 
-#### [Don’t recall how to prompt the user for their name?](#dont-recall-how-to-prompt-the-user-for-their-name)
+#### [Don’t recall how to prompt the user  for their name?](#dont-recall-how-to-prompt-the-user-for-their-name)
 
 Recall that you can use `get_string` as follows, storing its *return
 value* in a variable called `name` of type `string`.

@@ -15,7 +15,7 @@
       * Print an error message ("Key must contain each letter exactly once").
       * Exit with an error code (1).
    - Mark the element in the used array at the specified index as true.
-6. Display "plaintext: " to prompt the user input a string and store it in plaintext.
+6. Display "plaintext: " to prompt the user to input a string and store it in plaintext.
 7. Display "ciphertext: ".
 8. Loop through each character in the plaintext:
     - If the character is alphabetic:
