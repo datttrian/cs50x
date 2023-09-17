@@ -53,8 +53,6 @@ def index():
     )
 
 
-@app.route("/buy", methods=["GET", "POST"])
-@login_required
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
@@ -73,6 +71,43 @@ def buy():
             request.form.get("shares")
         )
         rows = db.execute("SELECT cash from users WHERE id = ?", session["user_id"])
+        if price > rows[0]["cash"]:
+            return apology("not enough funds", 400)
+        else:
+            cash = rows[0]["cash"] - price
+            db.execute(
+                "UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"]
+            )
+            data = db.execute(
+                "SELECT number FROM owned WHERE user_id = ? AND stock = ?",
+                session["user_id"],
+                request.form.get("symbol"),
+            )
+            if data:
+                db.execute(
+                    "UPDATE owned SET number = ? WHERE user_id = ? AND stock = ?",
+                    data[0]["number"] + int(request.form.get("shares")),
+                    session["user_id"],
+                    request.form.get("symbol"),
+                )
+            else:
+                db.execute(
+                    "INSERT INTO owned (user_id,stock,number) VALUES (?,?,?)",
+                    session["user_id"],
+                    request.form.get("symbol"),
+                    int(request.form.get("shares")),
+                )
+            now = datetime.now()
+            date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+            db.execute(
+                "INSERT INTO transactions (user_id,type,name,price,time,number) VALUES (?,'Bought',?,?,?,?)",
+                session["user_id"],
+                request.form.get("symbol"),
+                lookup(request.form.get("symbol"))["price"],
+                date_time,
+                int(request.form.get("shares")),
+            )
+            return redirect("/")
     else:
         return render_template("buy.html")
 
