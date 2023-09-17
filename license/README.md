@@ -17,10 +17,6 @@ that text file and printing out the license plates, to test your
 file-reading logic. But when you run your program, only the last number
 prints 8 times! What went wrong?
 
-## [Demo](#demo)
-
-Recorded with [asciinema](https://asciinema.org)
-
 ## [Getting Started](#getting-started)
 
 1.  Log into [cs50.dev](https://cs50.dev/) using your GitHub account.

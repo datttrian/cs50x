@@ -24,24 +24,13 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
-        // TODO: Allocate memory to save the number
-        plates[idx] = malloc(7);
-
-        // TODO: Save plate number in array
-        // plates[idx] = buffer;
-        strcpy(plates[idx], buffer);
-
+        // Save plate number in array
+        plates[idx] = buffer;
         idx++;
     }
-
-    // TODO: Close the input file to release its resources
-    fclose(infile);
 
     for (int i = 0; i < 8; i++)
     {
         printf("%s\n", plates[i]);
-
-        // TODO: Free the memory
-        free(plates[i]);
     }
 }
