@@ -18,8 +18,6 @@ Perhaps the simplest way to represent an image is with a grid of pixels
 black-and-white images, we thus need 1 bit per pixel, as 0 could
 represent black and 1 could represent white, as in the below.
 
-![a simple bitmap](bitmap.png)
-
 In this sense, then, is an image just a bitmap (i.e., a map of bits).
 For more colorful images, you simply need more bits per pixel. A file
 format (like [BMP](https://en.wikipedia.org/wiki/BMP_file_format),
@@ -64,8 +62,6 @@ the 1-bit smiley above to a 24-bit smiley, substituting red for black, a
 24-bit BMP would store this bitmap as follows, where `0000ff` signifies
 red and `ffffff` signifies white; we’ve highlighted in red all instances
 of `0000ff`.
-
-![red smile](red_smile.png)
 
 Because we’ve presented these bits from left to right, top to bottom, in
 8 columns, you can actually see the red smiley if you take a step back.
@@ -134,8 +130,6 @@ averaging the color values of neighboring pixels.
 
 Consider the following grid of pixels, where we’ve numbered each pixel.
 
-![a grid of pixels](grid.png)
-
 The new value of each pixel would be the average of the values of all of
 the pixels that are within 1 row and column of the original pixel
 (forming a 3x3 box). For example, each of the color values for pixel 6
@@ -166,8 +160,6 @@ objects could take place in both a vertical and a horizontal direction,
 you’ll actually compute two weighted sums: one for detecting edges in
 the x direction, and one for detecting edges in the y direction. In
 particular, you’ll use the following two “kernels”:
-
-![Sobel kernels](sobel.png)
 
 How to interpret these kernels? In short, for each of the three color
 values for each pixel, we’ll compute two values `Gx` and `Gy`. To
@@ -388,11 +380,7 @@ modify any other files other than `helpers.c`.
 
 **Please note that there are 5 videos in this playlist.**
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=vsOsctDernw) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=vsOsctDernw)
 
 ## [Usage](#usage)
 
