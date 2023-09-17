@@ -215,30 +215,42 @@ def register():
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 400)
+            return apology("must provide username", 400)  # return an error if username is missing
+
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 400)
+            return apology("must provide password", 400)  # return an error if password is missing
+
+        # Ensure password confirmation was submitted
         elif not request.form.get("confirmation"):
-            return apology("must confirm your password", 400)
+            return apology("must confirm your password", 400)  # return an error if confirmation is missing
+
+        # Ensure password and confirmation match
         elif request.form.get("confirmation") != request.form.get("password"):
-            return apology("must check your password again", 400)
-        rows = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
-        )
+            return apology("must check your password again", 400)  # return an error if passwords do not match
+
+        # Check if the username is already in use
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         if rows:
-            return apology("username already used", 400)
+            return apology("username already used", 400)  # return an error if the username is already taken
+
+        # If all checks pass, insert the new user into the database
         db.execute(
-            "INSERT INTO users (username,hash) VALUES (?,?)",
+            "INSERT INTO users (username, hash) VALUES (?, ?)",
             request.form.get("username"),
             generate_password_hash(request.form.get("password")),
         )
-        number = db.execute(
-            "SELECT id FROM users WHERE username = ?", request.form.get("username")
-        )
+
+        # Query the database to get the new user's ID
+        number = db.execute("SELECT id FROM users WHERE username = ?", request.form.get("username"))
+
+        # Store the user's ID in the session
         session["user_id"] = number[0]["id"]
+
+        # Redirect the user to the homepage
         return redirect("/")
     else:
+        # Render the registration page if the request method is not POST
         return render_template("register.html")
 
 

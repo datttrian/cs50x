@@ -77,4 +77,5 @@ def comparative_averages(new_cases, states):
             print(f"{state} data is insufficient to calculate the 7-day average.")
 
 
-main()
+if __name__ == "__main__":
+    main()
