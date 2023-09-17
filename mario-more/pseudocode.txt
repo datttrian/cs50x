@@ -1,7 +1,0 @@
-1. Display "Height: " to prompt the user to input a positive integer between 1 and 8 and store it in 'n'.
-2. For each row from '1' to 'n':
-   - Print 'n - row' spaces.
-   - Print 'row' hash symbols ('#') for the left half of the pyramid.
-   - Print 'two' spaces (" ") for the gap between the two pyramids.
-   - Print 'row' hash symbols ('#') for the right half of the pyramid.
-   - Move to the next line for the next row.
