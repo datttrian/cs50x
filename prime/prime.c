@@ -31,5 +31,33 @@ int main(void)
 bool prime(int number)
 {
     // TODO
-    return false;
+    // Numbers less than or equal to 1 are not prime
+    if (number <= 1)
+    {
+        return false;
+    }
+
+    // Two is a prime number
+    if (number == 2)
+    {
+        return true;
+    }
+
+    // Even numbers greater than 2 are not prime
+    if (number % 2 == 0)
+    {
+        return false;
+    }
+
+    // Numbers divisible by any odd number up to the square root are not prime
+    for (int i = 3; i * i <= number; i += 2)
+    {
+        if (number % i == 0)
+        {
+            return false;
+        }
+    }
+
+    // Other numbers are prime
+    return true;
 }
