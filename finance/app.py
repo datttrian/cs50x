@@ -53,6 +53,8 @@ def index():
     )
 
 
+@app.route("/buy", methods=["GET", "POST"])
+@login_required
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
@@ -116,6 +118,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    # return apology("TODO")
     transactions = db.execute(
         "SELECT * FROM transactions WHERE user_id = ?", session["user_id"]
     )
@@ -169,11 +172,18 @@ def logout():
     return redirect("/")
 
 
-@app.route("/quote", methods=["GET", "POST"])
+@app.route("/quote", methods=["POST"])
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+    if not request.form.get("symbol"):
+            return apology("must provide a stock symbol", 400)
+    if lookup(request.form.get("symbol")):
+            stock = lookup(request.form.get("symbol"))
+            stock["price"] = usd(stock["price"])
+            return render_template("quoted.html", stock=stock)
+    else:
+            return apology("No such stock symbol", 400)
 
 
 @app.route("/register", methods=["GET", "POST"])

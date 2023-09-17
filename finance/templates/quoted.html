@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Look up
+{% endblock %}
+
+{% block main %}
+    <table class="center">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>{{ stock["name"] }}</th>
+                <th>{{ stock["price"] }}</th>
+                <th>{{ stock["symbol"] }}</th>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
