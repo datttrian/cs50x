@@ -22,10 +22,6 @@ each item you choose, and return the corresponding price.
     [`strings.h`](https://manual.cs50.io/#strings.h) that may come in
     handy here.
 
-## [Demo](#demo)
-
-Recorded with [asciinema](https://asciinema.org)
-
 ## [Getting Started](#getting-started)
 
 1.  Log into [cs50.dev](https://cs50.dev/) using your GitHub account.

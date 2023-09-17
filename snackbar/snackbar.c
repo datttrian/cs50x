@@ -13,7 +13,7 @@
  * Cold Brew: $3
  * Water: $2
  * Soda: $2
-*/
+ */
 
 #include <cs50.h>
 #include <ctype.h>
@@ -30,8 +30,7 @@ typedef struct
 {
     string item;
     float price;
-}
-menu_item;
+} menu_item;
 
 // Array of menu items
 menu_item menu[NUM_ITEMS];
@@ -51,7 +50,7 @@ int main(void)
 
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        printf("%s: $%.2f\n", menu[i].item, menu[i]. price);
+        printf("%s: $%.2f\n", menu[i].item, menu[i].price);
     }
     printf("\n");
 
@@ -74,11 +73,49 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    return;
+    menu[0].item = "Burger";
+    menu[0].price = 9.50;
+
+    menu[1].item = "Vegan Burger";
+    menu[1].price = 11.00;
+
+    menu[2].item = "Hot Dog";
+    menu[2].price = 5.00;
+
+    menu[3].item = "Cheese Dog";
+    menu[3].price = 7.00;
+
+    menu[4].item = "Fries";
+    menu[4].price = 5.00;
+
+    menu[5].item = "Cheese Fries";
+    menu[5].price = 6.00;
+
+    menu[6].item = "Cold Pressed Juice";
+    menu[6].price = 7.00;
+
+    menu[7].item = "Cold Brew";
+    menu[7].price = 3.00;
+
+    menu[8].item = "Water";
+    menu[8].price = 2.00;
+
+    menu[9].item = "Soda";
+    menu[9].price = 2.00;
 }
 
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
+    for (int i = 0; i < NUM_ITEMS; i++)
+    {
+        // Use strcasecmp for case-insensitive comparison
+        if (strcasecmp(item, menu[i].item) == 0)
+        {
+            return menu[i].price;
+        }
+    }
+
+    // Return 0 if the item is not found
     return 0.0;
 }
