@@ -32,7 +32,7 @@
 
 - Lab: [Inheritance](inheritance)
 - Practice Problem: [Trie](/trie)
-- Problem Set: Speller
+- Problem Set: [Speller]()
 
 ## Week 6 Python
 
