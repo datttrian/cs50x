@@ -258,4 +258,22 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    # return apology("TODO")
+    owned = db.execute(
+            "SELECT stock,number FROM owned WHERE user_id = ?", session["user_id"]
+        )
+    cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0][
+            "cash"
+        ]
+    if request.method == "POST":
+        if not request.form.get("symbol"):
+            return apology("must choose a stock", 400)
+        elif not request.form.get("shares"):
+            return apology("must enter a number", 400)
+        elif not request.form.get("shares").isnumeric():
+            return apology("must enter a number", 400)
+        elif int(request.form.get("shares")) <= 0:
+            return apology("must enter a positive number", 400)
+        return redirect("/")
+    else:
+        return render_template("sell.html", owned=owned)
