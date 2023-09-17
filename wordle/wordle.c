@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <time.h>
 
@@ -13,10 +13,10 @@
 #define WRONG 0
 
 // ANSI color codes for boxed in letters
-#define GREEN "\e[38;2;255;255;255;1m\e[48;2;106;170;100;1m"
-#define YELLOW "\e[38;2;255;255;255;1m\e[48;2;201;180;88;1m"
-#define RED "\e[38;2;255;255;255;1m\e[48;2;220;20;60;1m"
-#define RESET "\e[0;39m"
+#define GREEN   "\e[38;2;255;255;255;1m\e[48;2;106;170;100;1m"
+#define YELLOW  "\e[38;2;255;255;255;1m\e[48;2;201;180;88;1m"
+#define RED     "\e[38;2;255;255;255;1m\e[48;2;220;20;60;1m"
+#define RESET   "\e[0;39m"
 
 // user-defined function prototypes
 string get_guess(int wordsize);
@@ -27,27 +27,11 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
-    // Check if the program was called with the correct number of command-line arguments.
-    if (argc != 2)
-    {
-        printf("Usage: ./wordle wordsize\n");
-        return 1;
-    }
 
     int wordsize = 0;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    // Convert the command-line argument to an integer and store it as 'wordsize'.
-    wordsize = atoi(argv[1]);
-
-    // Verify that 'wordsize' is within the acceptable range (5 to 8).
-    if (wordsize < 5 || wordsize > 8)
-    {
-        // Print an error message and return an error code if 'wordsize' is invalid.
-        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
-        return 1;
-    }
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
@@ -76,7 +60,7 @@ int main(int argc, string argv[])
     bool won = false;
 
     // print greeting, using ANSI color codes to demonstrate
-    printf(GREEN "This is WORDLE50" RESET "\n");
+    printf(GREEN"This is WORDLE50"RESET"\n");
     printf("You have %i tries to guess the %i-letter word I'm thinking of\n", guesses, wordsize);
 
     // main game loop, one iteration for each guess
@@ -90,13 +74,12 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        memset(status, WRONG, sizeof(status));
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-
+        
         // Print the guess
         print_word(guess, wordsize, status);
 
@@ -110,15 +93,6 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
-    // Print the game result based on whether the player won or ran out of guesses.
-    if (won)
-    {
-        printf("You won!\n");
-    }
-    else
-    {
-        printf("You ran out of guesses. The word was: %s\n", choice);
-    }
 
     // that's all folks!
     return 0;
@@ -130,12 +104,6 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
-    // Repeatedly prompt the user for a guess until they enter a word of the correct length (equal to 'wordsize').
-    do
-    {
-        guess = get_string("Input a %d-letter word: ", wordsize);
-    }
-    while (strlen(guess) != wordsize);
 
     return guess;
 }
@@ -149,34 +117,11 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // HINTS
     // iterate over each letter of the guess
-    // iterate over each letter of the choice
-    // compare the current guess letter to the current choice letter
-    // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
-    // if it's in the word, but not the right spot, score CLOSE point (yellow)
-    // keep track of the total score by adding each individual letter's score from above
-    for (int i = 0; i < wordsize; i++)
-    {
-        // Compare each letter in the user's guess with the corresponding letter in the 'choice'.
-        if (guess[i] == choice[i])
-        {
-            // Assign 'EXACT' (2) points and update 'status' if letters match in the same position.
-            status[i] = EXACT;
-            score += EXACT;
-        }
-        else
-        {
-            for (int j = 0; j < wordsize; j++)
-            {
-                // Assign 'CLOSE' (1) point and update 'status' if letters don't match in the same position but are in 'choice'.
-                if (guess[i] == choice[j] && status[j] == WRONG)
-                {
-                    status[j] = CLOSE;
-                    score += CLOSE;
-                    break;
-                }
-            }
-        }
-    }
+        // iterate over each letter of the choice
+            // compare the current guess letter to the current choice letter
+                // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
+                // if it's in the word, but not the right spot, score CLOSE point (yellow)
+        // keep track of the total score by adding each individual letter's score from above
 
     return score;
 }
@@ -185,24 +130,7 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-    for (int i = 0; i < wordsize; i++)
-    {
-        // Print each letter with the appropriate color code based on the 'status' array.
-        // Use green for 'EXACT', yellow for 'CLOSE', and red for 'WRONG'.
-        // Reset the color after each letter.
-        if (status[i] == EXACT)
-        {
-            printf(GREEN "%c" RESET, guess[i]);
-        }
-        else if (status[i] == CLOSE)
-        {
-            printf(YELLOW "%c" RESET, guess[i]);
-        }
-        else
-        {
-            printf(RED "%c" RESET, guess[i]);
-        }
-    }
+
     printf("\n");
     return;
 }
