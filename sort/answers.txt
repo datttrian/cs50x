@@ -1,11 +1,16 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?:
+time ./sort1 sorted50000.txt -> 0m0.334s -> sort1 uses Bubble Sort
+time ./sort3 sorted50000.txt -> 0m2.240s
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?:
+time ./sort1 random10000.txt -> 0m0.231s
+time ./sort2 random10000.txt -> 0m0.048s -> sort2 uses Merge Sort
+time ./sort3 random10000.txt -> 0m0.159s
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: By the process of elimination, as sort1 uses Bubble Sort, and sort2 uses Merge Sort.
