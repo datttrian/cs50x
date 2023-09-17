@@ -43,16 +43,18 @@ int main(int argc, char *argv[])
     BITMAPINFOHEADER bi;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
+    // TODO: Flip the image
+    bi.biHeight = -bi.biHeight;
+
     // Ensure infile is (likely) a 24-bit uncompressed BMP 4.0
-    if (bf.bfType != 0x4d42 || bf.bfOffBits != 54 || bi.biSize != 40 ||
-        bi.biBitCount != 24 || bi.biCompression != 0)
+    if (bf.bfType != 0x4d42 || bf.bfOffBits != 54 || bi.biSize != 40 || bi.biBitCount != 24 || bi.biCompression != 0)
     {
         fclose(outptr);
         fclose(inptr);
         printf("Unsupported file format.\n");
         return 4;
     }
-    
+
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
