@@ -143,37 +143,7 @@ writing code. Though the interface may look different from your
 codespace, the behavior of the two environments should be largely
 similar!
 
-[ CS50 Video Player](/)
-
--  Shortcuts
-
-&nbsp;
-
-- Snacks
-
-&nbsp;
-
--
-
-- [](https://video.cs50.io/LiGhjz9ColQ)
-
-##### Shortcuts
-
-Before using a shortcut, click at least once on the video itself (to
-give it "focus") after closing this window.
-
-|                               |                         |
-|-------------------------------|-------------------------|
-| Play/Pause                    | spacebar or k           |
-| Rewind 10 seconds             | left arrow or j         |
-| Fast forward 10 seconds       | right arrow or l        |
-| Previous frame (while paused) | ,                       |
-| Next frame (while paused)     | .                       |
-| Decrease playback rate        | \<                      |
-| Increase playback rate        | \>                      |
-| Toggle captions on/off        | c                       |
-| Toggle mute                   | m                       |
-| Toggle full screen            | f or double-click video |
+[CS50 Video Player](https://video.cs50.io/LiGhjz9ColQ)
 
 ### [Hints](#hints)
 
