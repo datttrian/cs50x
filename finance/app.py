@@ -260,11 +260,11 @@ def sell():
     """Sell shares of stock"""
     # return apology("TODO")
     owned = db.execute(
-            "SELECT stock,number FROM owned WHERE user_id = ?", session["user_id"]
-        )
+        "SELECT stock,number FROM owned WHERE user_id = ?", session["user_id"]
+    )
     cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0][
-            "cash"
-        ]
+        "cash"
+    ]
     if request.method == "POST":
         if not request.form.get("symbol"):
             return apology("must choose a stock", 400)
@@ -288,8 +288,49 @@ def sell():
                         session["user_id"],
                         stock["stock"],
                     )
+                    cash += (
+                        int(request.form.get("shares"))
+                        * lookup(request.form.get("symbol"))["price"]
+                    )
+                    db.execute(
+                        "UPDATE users SET cash = ? WHERE id = ?",
+                        cash,
+                        session["user_id"],
+                    )
+                    db.execute(
+                        "INSERT INTO transactions (user_id,type,name,price,time,number) VALUES (?,'Sold',?,?,?,?)",
+                        session["user_id"],
+                        request.form.get("symbol"),
+                        lookup(request.form.get("symbol"))["price"],
+                        date_time,
+                        int(request.form.get("shares")),
+                    )
                 else:
-                    pass
+                    now = datetime.now()
+                    date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+                    cash += (
+                        int(request.form.get("shares"))
+                        * lookup(request.form.get("symbol"))["price"]
+                    )
+                    db.execute(
+                        "UPDATE users SET cash = ? WHERE id = ?",
+                        cash,
+                        session["user_id"],
+                    )
+                    db.execute(
+                        "INSERT INTO transactions (user_id,type,name,price,time,number) VALUES (?,'Sold',?,?,?,?)",
+                        session["user_id"],
+                        request.form.get("symbol"),
+                        lookup(request.form.get("symbol"))["price"],
+                        date_time,
+                        int(request.form.get("shares")),
+                    )
+                    db.execute(
+                        "UPDATE owned SET number = ? WHERE user_id = ? and stock = ?",
+                        stock["number"] - int(request.form.get("shares")),
+                        session["user_id"],
+                        stock["stock"],
+                    )
         return redirect("/")
     else:
         return render_template("sell.html", owned=owned)
