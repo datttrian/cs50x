@@ -38,39 +38,29 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-    int cents;
-    do
-    {
-        cents = get_int("Change owed: "); // prompt the user for the change owed
-    }
-    while (cents < 0); // keep asking until until a non-negative value is entered
-    return cents;
+    return 0;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
-    int quarters = cents / 25; // calculate quarters by dividing cents by 25
-    return quarters;
+    return 0;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    int dimes = (cents % 25) / 10; // calculate dimes using the remainder divided by 10
-    return dimes;
+    return 0;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    int nickels = (cents % 25 % 10) / 5; // calculate nickels using the remainder divided by 5
-    return nickels;
+    return 0;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
-    int pennies = cents % 5; // equivalent to ((cents % 25) % 10) % 5;
-    return pennies;
+    return 0;
 }
