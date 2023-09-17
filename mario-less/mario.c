@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    // Prompt the user to input a positive integer from 1 to 8
+    // Display "Positive Number: " to prompt the user to input a positive integer from 1 to 8 and store it in n
     int n;
     do
     {
