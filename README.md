@@ -38,7 +38,7 @@
 
 - Lab: [World Cup](world-cup)
 - Practice Problem: [Bank](bank), [Frank, Ian and Glen’s Letters](figlet), [Jar](jar), [Seven Day Average](seven-day-average), [Taqueria](taqueria)
-- Problem Set: [Hello](sentimental-hello), [Mario Less](sentimental-mario-less), [Mario More](sentimental-mario-more), [Cash](sentimental-cash), [Credit](sentimental-credit), [Readability](sentimental-readability), [DNA](/dna)
+- Problem Set: [Hello](sentimental-hello), [Mario Less](sentimental-mario-less), [Mario More](sentimental-mario-more), [Cash](sentimental-cash), [Credit](sentimental-credit), [Readability](sentimental-readability), [DNA](dna)
 
 ## Week 7 SQL
 
