@@ -27,15 +27,5 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
-    // Initialize 'total' as a float to avoid integer division
-    float total = 0.0f;
 
-    // Calculate the total hours
-    for (int i = 0; i < weeks; i++)
-    {
-        total += hours[i];
-    }
-
-    // Return the result based on the 'output' parameter
-    return (output == 'T') ? total : total / weeks;
 }
