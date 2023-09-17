@@ -2,6 +2,10 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>   //
+#include <stdlib.h>  //
+#include <string.h>  //
+#include <strings.h> //
 
 #include "dictionary.h"
 
@@ -10,11 +14,12 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+// const unsigned int N = 26;
+const unsigned int N = 26 * 26 * 26;
+unsigned int words_count = 0;
 
 // Hash table
 node *table[N];
@@ -23,6 +28,16 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    int hash_index = hash(word);
+
+    // Iterate through the linked list of the hash_index of the table
+    node *cursor = table[hash_index];
+    while (cursor)
+    {
+        if (strcasecmp(word, cursor->word) == 0)
+            return true;
+        cursor = cursor->next;
+    }
     return false;
 }
 
@@ -30,26 +45,88 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    // ensure that word is not empty and contains at least three characters
+    if (word == NULL || word[0] == '\0' || word[1] == '\0' || word[2] == '\0')
+        return 0;
+
+    // Get the indices of the first three letters (ignoring case).
+    unsigned first_index = toupper(word[0]) - 'A';
+    unsigned second_index = toupper(word[1]) - 'A';
+    unsigned third_index = toupper(word[2]) - 'A';
+
+    // Ensure that the indices are within the range [0, 25].
+    first_index %= 26;
+    second_index %= 26;
+    third_index %= 26;
+
+    // Combine the three indices into a single hash value.
+    unsigned int hash_index = (first_index * 26 * 26) + (second_index * 26) + third_index;
+
+    return (hash_index);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    return false;
+    // Open dictionary file
+    FILE *infile = fopen(dictionary, "r");
+    if (!infile)
+        return false;
+
+    // Declare a buffer to read one word at a time
+    char buffer[LENGTH + 1];
+
+    // Scan words until EOF
+    while (fscanf(infile, "%s", buffer) != EOF)
+    {
+        // Create a new node
+        node *new_node = malloc(sizeof(node));
+        if (!new_node)
+            return false;
+
+        // Copy words from dictionary to new_node
+        strcpy(new_node->word, buffer);
+
+        // Get hash index of new word
+        int hash_index = hash(new_node->word);
+
+        // If hash table is empty, set next pointer to null
+        if (table[hash_index] == NULL)
+            new_node->next = NULL;
+
+        // Insert node into hash table at that location
+        else
+            new_node->next = table[hash_index];
+        table[hash_index] = new_node;
+
+        // Increment words count when add a new_node(new word)
+        words_count++;
+    }
+    fclose(infile);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return words_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < N; i++)
+    {
+        node *cursor = table[i];
+        while (cursor)
+        {
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+        }
+    }
+    return true;
 }
