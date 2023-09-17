@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    // Display "What's your name? " to prompt the user to input their name using cs50 function
+    // Prompt the user to input their name
     string name = get_string("What's your name? ");
 
     // Print a greeting message including the user's inputted name

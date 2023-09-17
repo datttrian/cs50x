@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    // Display "Height: " to prompt the user to input a positive integer from 1 to 8 and store it in n
+    // Prompt the user to input a positive integer from 1 to 8
     int n;
     do
     {
