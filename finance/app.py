@@ -274,6 +274,22 @@ def sell():
             return apology("must enter a number", 400)
         elif int(request.form.get("shares")) <= 0:
             return apology("must enter a positive number", 400)
+        for stock in owned:
+            if stock["stock"] == request.form.get("symbol"):
+                if stock["number"] == 0:
+                    return apology("you don't have it", 400)
+                elif stock["number"] < int(request.form.get("shares")):
+                    return apology("you don't have enough", 400)
+                elif stock["number"] == int(request.form.get("shares")):
+                    now = datetime.now()
+                    date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+                    db.execute(
+                        "DELETE FROM owned WHERE user_id = ? and stock = ?",
+                        session["user_id"],
+                        stock["stock"],
+                    )
+                else:
+                    pass
         return redirect("/")
     else:
         return render_template("sell.html", owned=owned)
