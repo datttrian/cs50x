@@ -253,41 +253,65 @@ def register():
         # Render the registration page if the request method is not POST
         return render_template("register.html")
 
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
     # return apology("TODO")
+    # Placeholder for a function to handle selling shares of stock.
+    
+    # Retrieve the list of stocks owned by the user from the database.
     owned = db.execute(
         "SELECT stock,number FROM owned WHERE user_id = ?", session["user_id"]
     )
+    
+    # Retrieve the user's cash balance from the database.
     cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0][
         "cash"
     ]
+    
+    # Check if the request method is POST, indicating a form submission.
     if request.method == "POST":
+        # Check if the 'symbol' field is empty.
         if not request.form.get("symbol"):
             return apology("must choose a stock", 400)
+        
+        # Check if the 'shares' field is empty.
         elif not request.form.get("shares"):
             return apology("must enter a number", 400)
+        
+        # Check if the 'shares' field contains a valid numeric value.
         elif not request.form.get("shares").isnumeric():
             return apology("must enter a number", 400)
+        
+        # Check if the 'shares' value is less than or equal to zero.
         elif int(request.form.get("shares")) <= 0:
             return apology("must enter a positive number", 400)
+        
+        # Iterate through the owned stocks to find the one being sold.
         for stock in owned:
             if stock["stock"] == request.form.get("symbol"):
+                # Check if the user doesn't own any of the selected stock.
                 if stock["number"] == 0:
                     return apology("you don't have it", 400)
+                
+                # Check if the user doesn't own enough of the selected stock.
                 elif stock["number"] < int(request.form.get("shares")):
                     return apology("you don't have enough", 400)
+                
+                # User is selling all owned shares of the selected stock.
                 elif stock["number"] == int(request.form.get("shares")):
                     now = datetime.now()
                     date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+                    
+                    # Delete the stock from the 'owned' table.
                     db.execute(
                         "DELETE FROM owned WHERE user_id = ? and stock = ?",
                         session["user_id"],
                         stock["stock"],
                     )
+                    
+                    # Update the user's cash balance.
                     cash += (
                         int(request.form.get("shares"))
                         * lookup(request.form.get("symbol"))["price"]
@@ -297,6 +321,8 @@ def sell():
                         cash,
                         session["user_id"],
                     )
+                    
+                    # Record the transaction in the 'transactions' table.
                     db.execute(
                         "INSERT INTO transactions (user_id,type,name,price,time,number) VALUES (?,'Sold',?,?,?,?)",
                         session["user_id"],
@@ -305,9 +331,13 @@ def sell():
                         date_time,
                         int(request.form.get("shares")),
                     )
+                
+                # User is selling a portion of owned shares of the selected stock.
                 else:
                     now = datetime.now()
                     date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+                    
+                    # Update the user's cash balance.
                     cash += (
                         int(request.form.get("shares"))
                         * lookup(request.form.get("symbol"))["price"]
@@ -317,6 +347,8 @@ def sell():
                         cash,
                         session["user_id"],
                     )
+                    
+                    # Record the transaction in the 'transactions' table.
                     db.execute(
                         "INSERT INTO transactions (user_id,type,name,price,time,number) VALUES (?,'Sold',?,?,?,?)",
                         session["user_id"],
@@ -325,12 +357,18 @@ def sell():
                         date_time,
                         int(request.form.get("shares")),
                     )
+                    
+                    # Update the number of owned shares in the 'owned' table.
                     db.execute(
                         "UPDATE owned SET number = ? WHERE user_id = ? and stock = ?",
                         stock["number"] - int(request.form.get("shares")),
                         session["user_id"],
                         stock["stock"],
                     )
+        
+        # Redirect to the homepage after the transaction is completed.
         return redirect("/")
+    
+    # If the request method is not POST, render the 'sell.html' template.
     else:
         return render_template("sell.html", owned=owned)
