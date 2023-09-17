@@ -18,8 +18,6 @@ Perhaps the simplest way to represent an image is with a grid of pixels
 black-and-white images, we thus need 1 bit per pixel, as 0 could
 represent black and 1 could represent white, as in the below.
 
-![a simple bitmap](bitmap.png)
-
 In this sense, then, is an image just a bitmap (i.e., a map of bits).
 For more colorful images, you simply need more bits per pixel. A file
 format (like [BMP](https://en.wikipedia.org/wiki/BMP_file_format),
@@ -64,8 +62,6 @@ the 1-bit smiley above to a 24-bit smiley, substituting red for black, a
 24-bit BMP would store this bitmap as follows, where `0000ff` signifies
 red and `ffffff` signifies white; we’ve highlighted in red all instances
 of `0000ff`.
-
-![red smile](red_smile.png)
 
 Because we’ve presented these bits from left to right, top to bottom, in
 8 columns, you can actually see the red smiley if you take a step back.
@@ -129,7 +125,7 @@ pixel, the sepia color values should be calculated based on the original
 color values per the below.
 
 ``` highlight
-  sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
+sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
 sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
 sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
 ```
@@ -161,8 +157,6 @@ taking each pixel and, for each color value, giving it a new value by
 averaging the color values of neighboring pixels.
 
 Consider the following grid of pixels, where we’ve numbered each pixel.
-
-![a grid of pixels](grid.png)
 
 The new value of each pixel would be the average of the values of all of
 the pixels that are within 1 row and column of the original pixel
@@ -360,11 +354,7 @@ modify any other files other than `helpers.c`.
 
 **Please note that there are 5 videos in this playlist.**
 
-# Đã xảy ra lỗi.
-
-[Thử xem video này trên
-www.youtube.com](https://www.youtube.com/watch?v=K0v9byp9jd0) hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[CS50 Video Player](https://www.youtube.com/watch?v=K0v9byp9jd0)
 
 ## [Usage](#usage)
 
