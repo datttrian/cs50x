@@ -145,10 +145,6 @@ Text: As the average number of letters and words per sentence increases, the Col
 Grade 12
 ```
 
-Watch a Recording
-
-Recorded with [asciinema](https://asciinema.org)
-
 ## [Specification](#specification)
 
 Design and implement a program, `readability`, that computes the
