@@ -30,8 +30,7 @@ to create a folder called `movies`. You no longer need the ZIP file, so
 you can execute
 
 ``` highlight
-
-
+rm movies.zip
 ```
 
 and respond with “y” followed by Enter at the prompt to remove the ZIP
