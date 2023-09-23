@@ -48,7 +48,7 @@
 
 ## Week 8 HTML, CSS, JavaScript
 
-- Lab: Trivia
+- Lab: [Trivia](trivia)
 - Practice Problem: Radio Shack Redo
 - Problem Set: Homepage
 
