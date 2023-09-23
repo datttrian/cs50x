@@ -54,10 +54,10 @@ controling the layout of the page.
 
 ``` highlight
 <table border="0" cellspacing="0" cellpadding="0" width="969"><tr valign="top" align="left">
-<td colspan="1" width="10"><img src="dot_clear.gif" width="10" height="1" border="0"></td>
-<td colspan="1" width="2"><img src="dot_clear.gif" width="2" height="1" border="0"></td>
-<td colspan="1" width="35"><img src="dot_clear.gif" width="35" height="1" border="0"></td
-...
+	<td colspan="1" width="10"><img src="dot_clear.gif" width="10" height="1" border="0"></td>
+	<td colspan="1" width="2"><img src="dot_clear.gif" width="2" height="1" border="0"></td>
+	<td colspan="1" width="35"><img src="dot_clear.gif" width="35" height="1" border="0"></td
+ ...
 ```
 
 Since there was still limited choices for fonts, all of the type you see
@@ -107,20 +107,20 @@ navigation bar with minimal code and copy this code to the top of the
 
 ``` highlight
 <nav class="navbar navbar-expand-lg bg-light">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Navbar</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-<div class="navbar-nav">
-<a class="nav-link active" aria-current="page" href="#">Home</a>
-<a class="nav-link" href="#">Features</a>
-<a class="nav-link" href="#">Pricing</a>
-<a class="nav-link disabled">Disabled</a>
-</div>
-</div>
-</div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled">Disabled</a>
+      </div>
+    </div>
+  </div>
 </nav>
 ```
 
