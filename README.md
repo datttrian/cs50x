@@ -49,7 +49,7 @@
 ## Week 8 HTML, CSS, JavaScript
 
 - Lab: [Trivia](trivia)
-- Practice Problem: Radio Shack Redo
+- Practice Problem: [Radio Shack Redo](redo)
 - Problem Set: Homepage
 
 ## Week 9 Flask
