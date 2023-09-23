@@ -42,21 +42,21 @@
 
 ## Week 7 SQL
 
-- Lab: [Songs](songs)
-- Practice Problem: [Favorites](favorites), [Hall of Prophecy](prophecy)
-- Problem Set: [Movies](movies), [Fiftyville](fiftyville)
+- Lab: Songs
+- Practice Problem: favorites, Hall of Prophecy
+- Problem Set: Movies, Fiftyville
 
 ## Week 8 HTML, CSS, JavaScript
 
-- Lab: [Trivia](trivia)
-- Practice Problem: [Radio Shack Redo](redo)
+- Lab: Trivia
+- Practice Problem: Radio Shack Redo
 - Problem Set: Homepage
 
 ## Week 9 Flask
 
-- Lab: [Birthdays](birthdays)
-- Practice Problem: [Hello, Flask](helloflask)
-- Problem Set: [Finance](finance)
+- Lab: Birthdays
+- Practice Problem: Hello, Flask
+- Problem Set: Finance
 
 ## Week 10 Emoji
 
