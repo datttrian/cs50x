@@ -55,7 +55,7 @@
 ## Week 9 Flask
 
 - Lab: [Birthdays](birthdays)
-- Practice Problem: Hello, Flask
+- Practice Problem: [Hello, Flask](helloflask)
 - Problem Set: Finance
 
 ## Week 10 Emoji
