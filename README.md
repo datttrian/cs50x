@@ -50,7 +50,7 @@
 
 - Lab: [Trivia](trivia)
 - Practice Problem: [Radio Shack Redo](redo)
-- Problem Set: Homepage
+- Problem Set: [Homepage](homepage)
 
 ## Week 9 Flask
 
