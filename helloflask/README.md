@@ -6,8 +6,6 @@
   framework
 - Become familiar with Jinja, a templating language used with Flask
 
-![FlaskLogo](flask-logo.png)
-
 ## [Background](#background)
 
 [Flask](https://flask.palletsprojects.com/), a
@@ -39,7 +37,7 @@ The most simple Flask app uses just one file, `app.py`. This will create
 an html page and say hello. Add the following into `app.py` to get
 started.
 
-``` highlight
+``` py
 from flask import Flask
 
 app = Flask(__name__)
@@ -47,7 +45,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-return "Hello, World!"
+    return "Hello, World!"
 ```
 
 This bit of code starts by importing `Flask` from the `flask` library.
@@ -65,7 +63,7 @@ the name of the file is also “app” for consistency.
 The most mysterious line in the application you’ve written is probably
 the one where you wrote:
 
-``` highlight
+``` py
 @app.route("/")
 ```
 
@@ -109,17 +107,17 @@ folder.
 
 Inside `templates`, create a `layout.html` file that looks like this:
 
-``` highlight
+``` html
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-<title>Hello, Flask</title>
-</head>
-<body>
-<h1>Hello, Flask</h1>
-{% block body %}{% endblock %}
-</body>
+    <head>
+        <title>Hello, Flask</title>
+    </head>
+    <body>
+        <h1>Hello, Flask</h1>
+        {% block body %}{% endblock %}
+    </body>
 </html>
 ```
 
@@ -134,11 +132,11 @@ many blocks as you want. Just give each one a different name.
 Now create `index.html` so that it extends the template `layout.html`,
 like this:
 
-``` highlight
+``` html
 {% extends "layout.html" %}
 
 {% block body %}
-<p>Next we'll put a form here and get some POST action!</p>
+    <p>Next we'll put a form here and get some POST action!</p>
 {% endblock %}
 ```
 
@@ -149,7 +147,7 @@ below). Then, replace the direct return of text with a call to Flask’s
 function is to preprocess `index.html` such that, when we give it to the
 browser, it also includes the HTML it “inherits” from `layout.html`.
 
-``` highlight
+``` py
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -157,7 +155,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-return render_template("index.html")
+    return render_template("index.html")
 ```
 
 When you run your application now (type `flask run`!), you’ll get a
@@ -172,18 +170,18 @@ You can learn more about HTML Forms
 
 Add a form to `index.html` so that it looks like this:
 
-``` highlight
+``` html
 {% extends "layout.html" %}
 
 {% block body %}
-<form action="/" method="post">
-What is your favorite color?
-<select name="color">
-<option value="red">Harvard Crimson</option>
-<option value="blue">Yale Blue</option>
-</select>
-<button type="submit">Submit</button>
-</form>
+    <form action="/" method="post">
+        What is your favorite color?
+        <select name="color">
+            <option value="red">Harvard Crimson</option>
+            <option value="blue">Yale Blue</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
 {% endblock %}
 ```
 
@@ -201,7 +199,7 @@ Flask allows the use of the POST method on `/`.
 In `app.py`, we need to adjust our route to handle the POST request.
 Here is what our new `app.py` looks like.
 
-``` highlight
+``` py
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -209,12 +207,12 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-if request.method == "GET":
-return render_template("index.html")
-else:
-print("Form submitted!")
-color = request.form.get("color")
-return render_template("color.html", color=color)
+    if request.method == "GET":
+        return render_template("index.html")
+    else:
+        print("Form submitted!")
+        color = request.form.get("color")
+        return render_template("color.html", color=color)
 ```
 
 This example has some logic in it: if the user submits a GET request,
@@ -231,11 +229,11 @@ though, they submit a POST request, we’ll do a few different things:
 
 Let’s create `color.html` for our application to work:
 
-``` highlight
+``` html
 {% extends "layout.html" %}
 
 {% block body %}
-<p style="color: {{ color }}">Your favorite color is {{ color }}.</p>
+    <p style="color: {{ color }}">Your favorite color is {{ color }}.</p>
 {% endblock %}
 ```
 
