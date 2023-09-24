@@ -1,20 +1,19 @@
+# Import necessary modules and libraries
 import os
-
 from cs50 import SQL
 from datetime import datetime
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-
 from helpers import apology, login_required, lookup, usd
 
-# Configure application
+# Configure the Flask application
 app = Flask(__name__)
 
-# Custom filter
+# Custom Jinja filter for currency formatting
 app.jinja_env.filters["usd"] = usd
 
-# Configure session to use filesystem (instead of signed cookies)
+# Configure session to use the filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -23,6 +22,7 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 
+# Define a function to set cache control headers after each request
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -32,6 +32,7 @@ def after_request(response):
     return response
 
 
+# Route for the home page
 @app.route("/")
 @login_required
 def index():
@@ -60,6 +61,7 @@ def index():
     )
 
 
+# Route for buying stocks
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
@@ -135,6 +137,7 @@ def buy():
         return render_template("buy.html")
 
 
+# Route for viewing transaction history
 @app.route("/history")
 @login_required
 def history():
@@ -148,6 +151,7 @@ def history():
     return render_template("history.html", transactions=transactions)
 
 
+# Route for user login
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -187,6 +191,7 @@ def login():
         return render_template("login.html")
 
 
+# Route for user logout
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -198,6 +203,7 @@ def logout():
     return redirect("/")
 
 
+# Route for getting a stock quote
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
 def quote():
@@ -218,6 +224,7 @@ def quote():
         return render_template("quote.html")
 
 
+# Route for user registration
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
@@ -256,6 +263,7 @@ def register():
         return render_template("register.html")
 
 
+# Route for selling stocks
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():

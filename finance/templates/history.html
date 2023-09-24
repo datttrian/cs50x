@@ -1,30 +1,28 @@
 {% extends "layout.html" %}
-
 {% block title %}
 Home
 {% endblock %}
-
 {% block main %}
 <table class="table table-hover center">
-    <thead>
-        <tr>
-            <th>Type</th>
-            <th>Stock</th>
-            <th>Price</th>
-            <th>Number</th>
-            <th>Time</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for stock in transactions %}
-        <tr>
-            <th>{{ stock["type"] }}</th>
-            <th>{{ stock["name"] }}</th>
-            <th>{{ stock["price"] }}</th>
-            <th>{{ stock["number"] }}</th>
-            <th>{{ stock["time"] }}</th>
-        </tr>
-        {% endfor %}
-    </tbody>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Stock</th>
+      <th>Price</th>
+      <th>Number</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stock in transactions %}
+    <tr>
+      <th>{{ stock["type"] }}</th>
+      <th>{{ stock["name"] }}</th>
+      <th>{{ stock["price"] }}</th>
+      <th>{{ stock["number"] }}</th>
+      <th>{{ stock["time"] }}</th>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 {% endblock %}

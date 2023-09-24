@@ -41,7 +41,6 @@ def login_required(f):
 
 def lookup(symbol):
     """Look up quote for symbol."""
-
     # Prepare API request
     symbol = symbol.upper()
     end = datetime.datetime.now(pytz.timezone("US/Eastern"))

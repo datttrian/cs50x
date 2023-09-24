@@ -1,42 +1,40 @@
 {% extends "layout.html" %}
-
 {% block title %}
 Home
 {% endblock %}
-
 {% block main %}
 <table class="table table-hover center">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Number</th>
-            <th>Price</th>
-            <th>Holding Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for stock in owned %}
-        <tr>
-            <th>{{ stock["stock"] }}</th>
-            <th>{{ stock["number"] }}</th>
-            <th>{{ stock["price"] }}</th>
-            <th>{{ stock["value"] }}</th>
-        </tr>
-        {% endfor %}
-    </tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Price</th>
+      <th>Holding Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stock in owned %}
+    <tr>
+      <th>{{ stock["stock"] }}</th>
+      <th>{{ stock["number"] }}</th>
+      <th>{{ stock["price"] }}</th>
+      <th>{{ stock["value"] }}</th>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 <table class="table table-hover center">
-    <thead>
-        <tr>
-            <th>Cash</th>
-            <th>Total</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>{{ cash }}</th>
-            <th>{{ total }}</th>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Cash</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>{{ cash }}</th>
+      <th>{{ total }}</th>
+    </tr>
+  </tbody>
 </table>
 {% endblock %}
