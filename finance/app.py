@@ -1,6 +1,7 @@
 import os
 
 from cs50 import SQL
+from datetime import datetime
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -57,7 +58,62 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    # return apology("TODO")
+    if request.method == "POST":
+        if not request.form.get("symbol"):
+            return apology("must provide a stock", 400)
+        elif not lookup(request.form.get("symbol")):
+            return apology("no such stock", 400)
+        elif not request.form.get("shares"):
+            return apology("How many bro", 400)
+        elif not request.form.get("shares").isnumeric():
+            return apology("must enter a number", 400)
+        elif int(request.form.get("shares")) <= 0:
+            return apology("must buy at least one", 400)
+        stock = request.form.get("symbol")
+        price = lookup(request.form.get("symbol"))["price"] * int(
+            request.form.get("shares")
+        )
+        rows = db.execute("SELECT cash from users WHERE id = ?", session["user_id"])
+        if price > rows[0]["cash"]:
+            return apology("not enough funds", 400)
+        else:
+            cash = rows[0]["cash"] - price
+            db.execute(
+                "UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"]
+            )
+            data = db.execute(
+                "SELECT number FROM owned WHERE user_id = ? AND stock = ?",
+                session["user_id"],
+                request.form.get("symbol"),
+            )
+            if data:
+                db.execute(
+                    "UPDATE owned SET number = ? WHERE user_id = ? AND stock = ?",
+                    data[0]["number"] + int(request.form.get("shares")),
+                    session["user_id"],
+                    request.form.get("symbol"),
+                )
+            else:
+                db.execute(
+                    "INSERT INTO owned (user_id,stock,number) VALUES (?,?,?)",
+                    session["user_id"],
+                    request.form.get("symbol"),
+                    int(request.form.get("shares")),
+                )
+            now = datetime.now()
+            date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
+            db.execute(
+                "INSERT INTO transactions (user_id,type,name,price,time,number) VALUES (?,'Bought',?,?,?,?)",
+                session["user_id"],
+                request.form.get("symbol"),
+                lookup(request.form.get("symbol"))["price"],
+                date_time,
+                int(request.form.get("shares")),
+            )
+            return redirect("/")
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
