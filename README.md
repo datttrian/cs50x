@@ -57,7 +57,3 @@
 - Lab: [Birthdays](birthdays)
 - Practice Problem: [Hello, Flask](helloflask)
 - Problem Set: [Finance](finance)
-
-## Week 10 Emoji
-
-- Final Project: Deploying OpenAI API with Django
